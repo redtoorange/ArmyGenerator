@@ -1,0 +1,139 @@
+[gd_scene load_steps=8 format=3 uid="uid://d2p6hkq05kg87"]
+
+[ext_resource type="Script" path="res://src/EditArmyView.cs" id="1_ejasg"]
+[ext_resource type="PackedScene" uid="uid://b6rsacjxn7nl2" path="res://Scenes/AvilableUnitListItem.tscn" id="1_oryx4"]
+[ext_resource type="Script" path="res://src/View/AvailableUnitList.cs" id="1_pb30e"]
+[ext_resource type="Script" path="res://src/View/SelectedUnitList.cs" id="3_n3kc6"]
+[ext_resource type="PackedScene" uid="uid://bqpqtdk27nkrj" path="res://Scenes/SelectedUnitListItem.tscn" id="4_3bg0h"]
+[ext_resource type="Script" path="res://src/SelectedArmyController.cs" id="6_hkpeb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_ov52g"]
+font_size = 20
+
+[node name="EditArmy" type="Control" node_paths=PackedStringArray("mainViewContainer")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ejasg")
+mainViewContainer = NodePath("MarginContainer/HSplitContainer")
+
+[node name="MenuBar" type="MenuBar" parent="."]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 31.0
+grow_horizontal = 2
+flat = true
+
+[node name="File" type="PopupMenu" parent="MenuBar"]
+item_count = 4
+item_0/text = "New"
+item_0/id = 0
+item_1/text = "Open"
+item_1/id = 1
+item_2/text = "Save"
+item_2/id = 3
+item_3/text = "Exit"
+item_3/id = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 31.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="HSplitContainer" type="HSplitContainer" parent="MarginContainer"]
+layout_mode = 2
+split_offset = 600
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Label" type="Label" parent="MarginContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+text = "Available Units"
+label_settings = SubResource("LabelSettings_ov52g")
+horizontal_alignment = 1
+
+[node name="AvailableUnitPanel" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="AvailableUnitList" type="VBoxContainer" parent="MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer/MarginContainer" node_paths=PackedStringArray("selectedUnitList")]
+layout_mode = 2
+script = ExtResource("1_pb30e")
+unitListItemPrefab = ExtResource("1_oryx4")
+selectedUnitList = NodePath("../../../../../VBoxContainer_2/SelectedUnitPanel/ScrollContainer/MarginContainer/SelectedUnitList")
+
+[node name="VBoxContainer_2" type="VBoxContainer" parent="MarginContainer/HSplitContainer"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Label_2" type="Label" parent="MarginContainer/HSplitContainer/VBoxContainer_2"]
+layout_mode = 2
+text = "Select Units"
+label_settings = SubResource("LabelSettings_ov52g")
+horizontal_alignment = 1
+
+[node name="Panel" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer_2"]
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 2
+
+[node name="SelectedUnitPanel" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer_2"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ScrollContainer" type="ScrollContainer" parent="MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/ScrollContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/margin_left = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 2
+
+[node name="SelectedUnitList" type="VBoxContainer" parent="MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/ScrollContainer/MarginContainer"]
+layout_mode = 2
+script = ExtResource("3_n3kc6")
+selectUnitListItem = ExtResource("4_3bg0h")
+
+[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList")]
+script = ExtResource("6_hkpeb")
+availableUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer/MarginContainer/AvailableUnitList")
+selectedUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/ScrollContainer/MarginContainer/SelectedUnitList")

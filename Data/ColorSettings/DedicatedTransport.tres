@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TypeToColorSetting" load_steps=2 format=3 uid="uid://dwgispuxikww4"]
+
+[ext_resource type="Script" path="res://src/View/TypeToColorSetting.cs" id="1_65rgf"]
+
+[resource]
+script = ExtResource("1_65rgf")
+type = "Dedicated Transport"
+color = Color(0.670588, 0.792157, 0.866667, 1)

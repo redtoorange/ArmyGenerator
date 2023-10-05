@@ -1,0 +1,734 @@
+{
+  "Tyranids": {
+	"1": {
+	  "Name": "Broodlord",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "90",
+	  "Max": 3
+	},
+	"2": {
+	  "Name": "Deathleaper",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "70",
+	  "Max": 1
+	},
+	"3": {
+	  "Name": "Hive Tyrant",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "235",
+	  "Max": 3
+	},
+	"4": {
+	  "Name": "Neurotyrant",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "105",
+	  "Max": 3
+	},
+	"5": {
+	  "Name": "Old One Eye",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "140",
+	  "Max": 1
+	},
+	"6": {
+	  "Name": "Parasite of Mortrex",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "80",
+	  "Max": 3
+	},
+	"7": {
+	  "Name": "Tervigon",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "190",
+	  "Max": 3
+	},
+	"8": {
+	  "Name": "The Swarmlord",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "270",
+	  "Max": 1
+	},
+	"9": {
+	  "Name": "Winged Hive Tyrant",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "210",
+	  "Max": 3
+	},
+	"10": {
+	  "Name": "Winged Tyranid Prime",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "65",
+	  "Max": 3
+	},
+	"11": {
+	  "Name": "Gargoyles",
+	  "Type": "Battleline",
+	  "Size": "10,20",
+	  "Points": "75,150",
+	  "Max": 6
+	},
+	"12": {
+	  "Name": "Hormagaunts",
+	  "Type": "Battleline",
+	  "Size": "10,20",
+	  "Points": "65,130",
+	  "Max": 6
+	},
+	"13": {
+	  "Name": "Termagants",
+	  "Type": "Battleline",
+	  "Size": "10,20",
+	  "Points": "60,120",
+	  "Max": 6
+	},
+	"14": {
+	  "Name": "Tyrannocyte",
+	  "Type": "Dedicated Transport",
+	  "Size": "1",
+	  "Points": "105",
+	  "Max": 6
+	},
+	"15": {
+	  "Name": "Barbgaunts",
+	  "Type": "Other",
+	  "Size": "5,10",
+	  "Points": "60,120",
+	  "Max": 3
+	},
+	"16": {
+	  "Name": "Biovores",
+	  "Type": "Other",
+	  "Size": "1-3",
+	  "Points": "75",
+	  "Max": 3
+	},
+	"17": {
+	  "Name": "Carnifexes",
+	  "Type": "Other",
+	  "Size": "1,2",
+	  "Points": "125,250",
+	  "Max": 3
+	},
+	"18": {
+	  "Name": "Exocrine",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "135",
+	  "Max": 3
+	},
+	"19": {
+	  "Name": "Genestealers",
+	  "Type": "Other",
+	  "Size": "5,10",
+	  "Points": "85,170",
+	  "Max": 3
+	},
+	"20": {
+	  "Name": "Harpy",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "215",
+	  "Max": 3
+	},
+	"21": {
+	  "Name": "Haruspex",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "125",
+	  "Max": 3
+	},
+	"22": {
+	  "Name": "Hive Crone",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "200",
+	  "Max": 3
+	},
+	"23": {
+	  "Name": "Hive Guard",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "110,220",
+	  "Max": 3
+	},
+	"24": {
+	  "Name": "Lictor",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "60",
+	  "Max": 3
+	},
+	"25": {
+	  "Name": "Maleceptor",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "170",
+	  "Max": 3
+	},
+	"26": {
+	  "Name": "Mawloc",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "145",
+	  "Max": 3
+	},
+	"27": {
+	  "Name": "Mucolid Spores",
+	  "Type": "Other",
+	  "Size": "1,2",
+	  "Points": "50,100",
+	  "Max": 3
+	},
+	"28": {
+	  "Name": "Neurogaunts",
+	  "Type": "Other",
+	  "Size": "11,22",
+	  "Points": "45,90",
+	  "Max": 3
+	},
+	"29": {
+	  "Name": "Neurolictor",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "65",
+	  "Max": 3
+	},
+	"30": {
+	  "Name": "Norn Assimilator",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "310",
+	  "Max": 3
+	},
+	"31": {
+	  "Name": "Norn Emissary",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "290",
+	  "Max": 3
+	},
+	"32": {
+	  "Name": "Psychophage",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "125",
+	  "Max": 3
+	},
+	"33": {
+	  "Name": "Pyrovores",
+	  "Type": "Other",
+	  "Size": "1-3",
+	  "Points": "30",
+	  "Max": 3
+	},
+	"34": {
+	  "Name": "Raveners",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "75,150",
+	  "Max": 3
+	},
+	"35": {
+	  "Name": "Ripper Swarms",
+	  "Type": "Other",
+	  "Size": "1-3",
+	  "Points": "20",
+	  "Max": 3
+	},
+	"36": {
+	  "Name": "Screamer-killer",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "170",
+	  "Max": 3
+	},
+	"37": {
+	  "Name": "Spore Mines",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "55,110",
+	  "Max": 3
+	},
+	"38": {
+	  "Name": "Sporocyst",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "145",
+	  "Max": 3
+	},
+	"39": {
+	  "Name": "Toxicrene",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "180",
+	  "Max": 3
+	},
+	"40": {
+	  "Name": "Trygon",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "180",
+	  "Max": 3
+	},
+	"41": {
+	  "Name": "Tyranid Warriors with Melee Weapons",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "85,170",
+	  "Max": 3
+	},
+	"42": {
+	  "Name": "Tyranid Warriors with Ranged Weapons",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "70,140",
+	  "Max": 3
+	},
+	"43": {
+	  "Name": "Tyrannofex",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "245",
+	  "Max": 3
+	},
+	"44": {
+	  "Name": "Tyrant Guard",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "95,190",
+	  "Max": 3
+	},
+	"45": {
+	  "Name": "Venomthropes",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "70,140",
+	  "Max": 3
+	},
+	"46": {
+	  "Name": "Von Ryan's Leapers",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "75,150",
+	  "Max": 3
+	},
+	"47": {
+	  "Name": "Zoanthropes",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "110,220",
+	  "Max": 3
+	}
+  },
+  "Orks": {
+	"1": {
+	  "Name": "Beastboss",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "100",
+	  "Max": 3
+	},
+	"2": {
+	  "Name": "Beastboss On Squigosaur",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "165",
+	  "Max": 3
+	},
+	"3": {
+	  "Name": "Big Mek In Mega Armour",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "85",
+	  "Max": 3
+	},
+	"4": {
+	  "Name": "Big Mek With Kustom Force Field",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "55",
+	  "Max": 3
+	},
+	"5": {
+	  "Name": "Big Mek With Shokk Attack Gun",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "75",
+	  "Max": 3
+	},
+	"6": {
+	  "Name": "Boss Snikrot",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "85",
+	  "Max": 1
+	},
+	"7": {
+	  "Name": "Boss Zagstruk",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "90",
+	  "Max": 1
+	},
+	"8": {
+	  "Name": "Deffkilla Wartrike",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "80",
+	  "Max": 3
+	},
+	"9": {
+	  "Name": "Ghazghkull Thraka",
+	  "Type": "Epic Character",
+	  "Size": "2",
+	  "Points": "235",
+	  "Max": 1
+	},
+	"10": {
+	  "Name": "Kaptin Badrukk",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "80",
+	  "Max": 1
+	},
+	"11": {
+	  "Name": "Mad Dok Grotsnik",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "65",
+	  "Max": 1
+	},
+	"12": {
+	  "Name": "Mek",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "45",
+	  "Max": 3
+	},
+	"13": {
+	  "Name": "Mozrog Skragbad",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "195",
+	  "Max": 1
+	},
+	"14": {
+	  "Name": "Nob On Smasha Squig",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "60",
+	  "Max": 3
+	},
+	"15": {
+	  "Name": "Nob With Waaagh! Banner",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "70",
+	  "Max": 3
+	},
+	"16": {
+	  "Name": "Painboss",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "60",
+	  "Max": 3
+	},
+	"17": {
+	  "Name": "Painboy",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "70",
+	  "Max": 3
+	},
+	"18": {
+	  "Name": "Warboss",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "65",
+	  "Max": 3
+	},
+	"19": {
+	  "Name": "Warboss In Mega Armour",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "80",
+	  "Max": 3
+	},
+	"20": {
+	  "Name": "Weirdboy",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "55",
+	  "Max": 3
+	},
+	"21": {
+	  "Name": "Wurrboy",
+	  "Type": "Character",
+	  "Size": "1",
+	  "Points": "60",
+	  "Max": 3
+	},
+	"22": {
+	  "Name": "Zodgrod Wortsnagga",
+	  "Type": "Epic Character",
+	  "Size": "1",
+	  "Points": "80",
+	  "Max": 1
+	},
+	"23": {
+	  "Name": "Beast Snagga Boyz",
+	  "Type": "Battleline",
+	  "Size": "10,20",
+	  "Points": "105,210",
+	  "Max": 6
+	},
+	"24": {
+	  "Name": "Boyz",
+	  "Type": "Battleline",
+	  "Size": "10,20",
+	  "Points": "85,170",
+	  "Max": 6
+	},
+	"25": {
+	  "Name": "Trukk",
+	  "Type": "Dedicated Transport",
+	  "Size": "1",
+	  "Points": "60",
+	  "Max": 6
+	},
+	"26": {
+	  "Name": "Big’ed Bossbunka",
+	  "Type": "Fortification",
+	  "Size": "1",
+	  "Points": "135",
+	  "Max": 3
+	},
+	"27": {
+	  "Name": "Mekboy Workshop",
+	  "Type": "Fortification",
+	  "Size": "1",
+	  "Points": "80",
+	  "Max": 3
+	},
+	"28": {
+	  "Name": "Battlewagon",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "180",
+	  "Max": 3
+	},
+	"29": {
+	  "Name": "Blitza-bommer",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "115",
+	  "Max": 3
+	},
+	"30": {
+	  "Name": "Boomdakka Snazzwagon",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "90",
+	  "Max": 3
+	},
+	"31": {
+	  "Name": "Burna Boyz",
+	  "Type": "Other",
+	  "Size": "5,10,15",
+	  "Points": "60,120,180",
+	  "Max": 3
+	},
+	"32": {
+	  "Name": "Burna-bommer",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "125",
+	  "Max": 3
+	},
+	"33": {
+	  "Name": "Dakkajet",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "135",
+	  "Max": 3
+	},
+	"34": {
+	  "Name": "Deff Dread",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "130",
+	  "Max": 3
+	},
+	"35": {
+	  "Name": "Deffkoptas",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "100,200",
+	  "Max": 3
+	},
+	"36": {
+	  "Name": "Flash Gitz",
+	  "Type": "Other",
+	  "Size": "5,10",
+	  "Points": "95,190",
+	  "Max": 3
+	},
+	"37": {
+	  "Name": "Gorkanaut",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "280",
+	  "Max": 3
+	},
+	"38": {
+	  "Name": "Gretchin",
+	  "Type": "Other",
+	  "Size": "11,22",
+	  "Points": "40,80",
+	  "Max": 3
+	},
+	"39": {
+	  "Name": "Hunta Rig",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "160",
+	  "Max": 3
+	},
+	"40": {
+	  "Name": "Kill Rig",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "200",
+	  "Max": 3
+	},
+	"41": {
+	  "Name": "Killa Kans",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "150,300",
+	  "Max": 3
+	},
+	"42": {
+	  "Name": "Kommandos",
+	  "Type": "Other",
+	  "Size": "10",
+	  "Points": "135",
+	  "Max": 3
+	},
+	"43": {
+	  "Name": "Kustom Boosta-blasta",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "85",
+	  "Max": 3
+	},
+	"44": {
+	  "Name": "Lootas",
+	  "Type": "Other",
+	  "Size": "5,10,15",
+	  "Points": "50,100,150",
+	  "Max": 3
+	},
+	"45": {
+	  "Name": "Meganobz",
+	  "Type": "Other",
+	  "Size": "2-6",
+	  "Points": "30",
+	  "Max": 3
+	},
+	"46": {
+	  "Name": "Megatrakk Scrapjet",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "90",
+	  "Max": 3
+	},
+	"47": {
+	  "Name": "Mek Gunz",
+	  "Type": "Other",
+	  "Size": "1-3",
+	  "Points": "55",
+	  "Max": 3
+	},
+	"48": {
+	  "Name": "Morkanaut",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "330",
+	  "Max": 3
+	},
+	"49": {
+	  "Name": "Nobz",
+	  "Type": "Other",
+	  "Size": "5,10",
+	  "Points": "105,210",
+	  "Max": 3
+	},
+	"50": {
+	  "Name": "Rukkatrukk Squigbuggy",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "110",
+	  "Max": 3
+	},
+	"51": {
+	  "Name": "Shokkjump Dragsta",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "85",
+	  "Max": 3
+	},
+	"52": {
+	  "Name": "Squighog Boyz",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "110,220",
+	  "Max": 3
+	},
+	"53": {
+	  "Name": "Stompa",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "800",
+	  "Max": 3
+	},
+	"54": {
+	  "Name": "Stormboyz",
+	  "Type": "Other",
+	  "Size": "5,10",
+	  "Points": "65,130",
+	  "Max": 3
+	},
+	"55": {
+	  "Name": "Tankbustas",
+	  "Type": "Other",
+	  "Size": "5",
+	  "Points": "110",
+	  "Max": 3
+	},
+	"56": {
+	  "Name": "Warbikers",
+	  "Type": "Other",
+	  "Size": "3,6",
+	  "Points": "70,140",
+	  "Max": 3
+	},
+	"57": {
+	  "Name": "Wazbom Blastajet",
+	  "Type": "Other",
+	  "Size": "1",
+	  "Points": "175",
+	  "Max": 3
+	}
+  }
+}

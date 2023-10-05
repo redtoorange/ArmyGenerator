@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TypeToColorSetting" load_steps=2 format=3 uid="uid://clmadel56bk3k"]
+
+[ext_resource type="Script" path="res://src/View/TypeToColorSetting.cs" id="1_635mv"]
+
+[resource]
+script = ExtResource("1_635mv")
+type = "Epic Character"
+color = Color(0.898039, 0.85098, 0.282353, 1)

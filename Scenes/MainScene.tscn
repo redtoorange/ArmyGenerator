@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://ljvqkoalw12x"]
+
+[ext_resource type="LabelSettings" uid="uid://cnohwfboisp6m" path="res://Theme/TitleLabelSettings.tres" id="1_gcqc7"]
+[ext_resource type="Theme" uid="uid://bqrbkefhferuf" path="res://Theme/MainTheme.tres" id="1_qmhad"]
+[ext_resource type="Script" path="res://src/UI/MainMenu.cs" id="1_s05cr"]
+[ext_resource type="PackedScene" uid="uid://d2p6hkq05kg87" path="res://Scenes/EditArmy.tscn" id="2_vl3cv"]
+
+[node name="MainScene" type="Control" node_paths=PackedStringArray("newArmyButton", "loadArmyButton", "editDataButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s05cr")
+newArmyScene = ExtResource("2_vl3cv")
+newArmyButton = NodePath("VBoxContainer/NewArmy")
+loadArmyButton = NodePath("VBoxContainer/LoadArmy")
+editDataButton = NodePath("VBoxContainer/EditData")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -151.0
+offset_top = -59.0
+offset_right = 151.0
+offset_bottom = 137.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="NewArmy" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_qmhad")
+theme_override_font_sizes/font_size = 32
+text = "New Army"
+
+[node name="LoadArmy" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_qmhad")
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Load Army"
+
+[node name="EditData" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("1_qmhad")
+theme_override_font_sizes/font_size = 32
+disabled = true
+text = "Edit Data"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -69.5
+offset_top = -155.0
+offset_right = 69.5
+offset_bottom = -99.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Army Generator"
+label_settings = ExtResource("1_gcqc7")
+horizontal_alignment = 1
+vertical_alignment = 1

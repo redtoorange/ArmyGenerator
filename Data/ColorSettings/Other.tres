@@ -1,0 +1,8 @@
+[gd_resource type="Resource" script_class="TypeToColorSetting" load_steps=2 format=3 uid="uid://b7s1udaq41gpf"]
+
+[ext_resource type="Script" path="res://src/View/TypeToColorSetting.cs" id="1_dkv5a"]
+
+[resource]
+script = ExtResource("1_dkv5a")
+type = "Other"
+color = Color(0.811765, 0.729412, 0.85098, 1)
