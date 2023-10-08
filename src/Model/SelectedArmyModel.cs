@@ -28,6 +28,18 @@ public class SelectedArmyModel
         return matchingUnits;
     }
 
+    public int GetUnitsOfTypeCount(UnitData unitData)
+    {
+        List<SelectArmyUnitModel> units = GetUnitsOfType(unitData);
+
+        if (units == null)
+        {
+            return 0;
+        }
+
+        return units.Count;
+    }
+
     public bool AddToArmy(UnitData unitData, out string unitReferenceId)
     {
         // See if we already have units of this type
@@ -39,7 +51,7 @@ public class SelectedArmyModel
             newModel.pointCount = unitData.FindMinimumKey().points;
 
             pointCount += newModel.pointCount;
-            
+
             unitReferenceId = newModel.unitReferenceId;
             matchingUnits.Add(newModel);
         }
@@ -51,9 +63,9 @@ public class SelectedArmyModel
             newModel.unitReferenceId = GenerateReferenceId(newList, unitData.unitId);
             newModel.modelCount = unitData.FindMinimumKey().models;
             newModel.pointCount = unitData.FindMinimumKey().points;
-            
+
             pointCount += newModel.pointCount;
-            
+
             unitReferenceId = newModel.unitReferenceId;
             newList.Add(newModel);
 

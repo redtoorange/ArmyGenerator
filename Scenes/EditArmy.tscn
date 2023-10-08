@@ -126,7 +126,7 @@ alignment = 1
 editable = false
 suffix = " pts"
 
-[node name="SpinBox_2" type="SpinBox" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel"]
+[node name="DesirePoints" type="SpinBox" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel"]
 layout_mode = 1
 anchors_preset = 4
 anchor_top = 0.5
@@ -202,8 +202,10 @@ layout_mode = 2
 script = ExtResource("3_n3kc6")
 selectUnitListItem = ExtResource("4_3bg0h")
 
-[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "pointsDisplay")]
+[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "desiredArmyPoints", "pointsDisplay", "fillArmyButton")]
 script = ExtResource("6_hkpeb")
 availableUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer/MarginContainer/AvailableUnitList")
 selectedUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/ScrollContainer/MarginContainer/SelectedUnitList")
+desiredArmyPoints = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/DesirePoints")
 pointsDisplay = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/PointsDisplay")
+fillArmyButton = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/Button")
