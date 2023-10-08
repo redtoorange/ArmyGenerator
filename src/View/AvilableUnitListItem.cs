@@ -32,7 +32,7 @@ public partial class AvilableUnitListItem : MarginContainer
         modelName.Text = unitDataValue.name;
         modelTypeLabel.Text = unitDataValue.type;
 
-        pointCountLabel.Text = unitDataValue.modelCountToPriceMap[unitDataValue.FindMinimumKey()].ToString();
+        pointCountLabel.Text = unitDataValue.FindMinimumKey().points.ToString();
 
         inventorySpinner.MaxValue = unitDataValue.maxCount;
         inventorySpinner.Value = unitDataValue.maxCount;

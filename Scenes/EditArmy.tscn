@@ -104,8 +104,77 @@ label_settings = SubResource("LabelSettings_ov52g")
 horizontal_alignment = 1
 
 [node name="Panel" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer_2"]
-custom_minimum_size = Vector2(0, 75)
+custom_minimum_size = Vector2(0, 65)
 layout_mode = 2
+
+[node name="PointsDisplay" type="SpinBox" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -182.0
+offset_top = -15.5
+offset_right = -32.0
+offset_bottom = 15.5
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+max_value = 3000.0
+alignment = 1
+editable = false
+suffix = " pts"
+
+[node name="SpinBox_2" type="SpinBox" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 32.0
+offset_top = -18.0
+offset_right = 182.0
+offset_bottom = 18.0
+grow_vertical = 2
+tooltip_text = "Maximum points in army"
+max_value = 3000.0
+value = 1500.0
+alignment = 1
+suffix = "pts"
+custom_arrow_step = 100.0
+select_all_on_focus = true
+
+[node name="Panel" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -21.5
+offset_right = -28.0
+offset_bottom = 21.5
+grow_horizontal = 0
+grow_vertical = 2
+tooltip_text = "Points in current army"
+
+[node name="Button" type="Button" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -4.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+tooltip_text = "Fill remaining points with Random units"
+text = "Fill Army"
 
 [node name="SelectedUnitPanel" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer_2"]
 layout_mode = 2
@@ -133,7 +202,8 @@ layout_mode = 2
 script = ExtResource("3_n3kc6")
 selectUnitListItem = ExtResource("4_3bg0h")
 
-[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList")]
+[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "pointsDisplay")]
 script = ExtResource("6_hkpeb")
 availableUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer/MarginContainer/AvailableUnitList")
 selectedUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/ScrollContainer/MarginContainer/SelectedUnitList")
+pointsDisplay = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/PointsDisplay")

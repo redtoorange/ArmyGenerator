@@ -6,7 +6,7 @@ namespace ArmyGenerator.ArmyList;
 
 public partial class SelectedUnitList : VBoxContainer
 {
-    public event Action<int, UnitData> OnUnitRemoved;
+    public event Action<string, UnitData> OnUnitRemoved;
     
     [Export] private PackedScene selectUnitListItem;
 
@@ -14,7 +14,7 @@ public partial class SelectedUnitList : VBoxContainer
     {
     }
 
-    public void AddUnit(int unitReferenceId, UnitData unit)
+    public void AddUnit(string unitReferenceId, UnitData unit)
     {
         SelectedUnitListItem listItem = selectUnitListItem.Instantiate<SelectedUnitListItem>();
         listItem.Initialize(unitReferenceId, unit);

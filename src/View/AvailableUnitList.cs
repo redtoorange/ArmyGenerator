@@ -11,13 +11,13 @@ public partial class AvailableUnitList : VBoxContainer
     [Export] private PackedScene unitListItemPrefab;
     [Export] private SelectedUnitList selectedUnitList;
 
-    private Dictionary<int, AvilableUnitListItem> unitIdToListItemMap;
+    private Dictionary<string, AvilableUnitListItem> unitIdToListItemMap;
 
     public void Initialize(ArmyListData currentArmy)
     {
-        unitIdToListItemMap = new Dictionary<int, AvilableUnitListItem>();
+        unitIdToListItemMap = new Dictionary<string, AvilableUnitListItem>();
         
-        foreach (KeyValuePair<int, UnitData> unitData in currentArmy.unitIdToDataMap)
+        foreach (KeyValuePair<string, UnitData> unitData in currentArmy.unitIdToDataMap)
         {
             GD.Print($"Adding {unitData.Value.name}");
             AvilableUnitListItem listItem = unitListItemPrefab.Instantiate<AvilableUnitListItem>();

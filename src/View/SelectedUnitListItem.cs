@@ -14,14 +14,14 @@ public partial class SelectedUnitListItem : MarginContainer
     [Export] private Button removeButton;
 
     private UnitData unitData;
-    private int unitReferenceId;
+    private string unitReferenceId;
 
     public override void _Ready()
     {
         removeButton.Pressed += () => OnRemovePressed?.Invoke(this);
     }
 
-    public void Initialize(int unitReferenceId, UnitData unitDataValue)
+    public void Initialize(string unitReferenceId, UnitData unitDataValue)
     {
         unitData = unitDataValue;
         this.unitReferenceId = unitReferenceId;
@@ -43,7 +43,7 @@ public partial class SelectedUnitListItem : MarginContainer
         return unitData;
     }
 
-    public int GetUnitReferenceId()
+    public string GetUnitReferenceId()
     {
         return unitReferenceId;
     }

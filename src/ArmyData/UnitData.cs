@@ -1,35 +1,40 @@
 ﻿using System;
-using Godot.Collections;
+using System.Collections.Generic;
 
 namespace ArmyGenerator.ArmyData;
 
+public class ModelsToPointData
+{
+    public int models;
+    public int points;
+
+    public ModelsToPointData(int models, int points)
+    {
+        this.models = models;
+        this.points = points;
+    }
+}
+
 public class UnitData
 {
-    public int unitId;
+    public string unitId;
     public string name;
     public string type;
     public int maxCount;
-    public Dictionary<int, int> modelCountToPriceMap;
+    
+    public List<ModelsToPointData> modelCountToPriceMap;
 
-    public UnitData(int unitId, string name, string type, int maxCount)
+    public UnitData(string unitId, string name, string type, int maxCount)
     {
         this.unitId = unitId;
         this.name = name;
         this.type = type;
         this.maxCount = maxCount;
-        modelCountToPriceMap = new Dictionary<int, int>();
+        modelCountToPriceMap = new List<ModelsToPointData>();
     }
 
-    public int FindMinimumKey()
+    public ModelsToPointData FindMinimumKey()
     {
-        int minKey = Int32.MaxValue;
-        foreach (int key in modelCountToPriceMap.Keys)
-        {
-            if (key < minKey)
-            {
-                minKey = key;
-            }
-        }
-        return minKey;
+        return modelCountToPriceMap[0];
     }
 }

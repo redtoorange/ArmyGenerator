@@ -33,14 +33,14 @@ public partial class DataFileLoader : Node
         loadedArmyListData = new List<ArmyListData>();
         foreach (string armyName in armyNames)
         {
-            Dictionary armyList = parsedFile[armyName].AsGodotDictionary();
+            Array armyList = parsedFile[armyName].AsGodotArray();
             ArmyListData listData = new ArmyListData(armyName);
 
-            foreach (Variant unitIdVariant in armyList.Keys)
+            foreach (Variant unitIdVariant in armyList)
             {
-                Dictionary unitEntry = armyList[unitIdVariant].AsGodotDictionary();
+                Dictionary unitEntry = unitIdVariant.AsGodotDictionary();
                 UnitData unitData = new UnitData(
-                    unitIdVariant.AsInt32(),
+                    unitEntry["UnitId"].AsString(),
                     unitEntry["Name"].AsString(),
                     unitEntry["Type"].AsString(),
                     unitEntry["Max"].AsInt32()
@@ -50,7 +50,7 @@ public partial class DataFileLoader : Node
                     unitEntry["Points"].AsString()
                 );
 
-                listData.unitIdToDataMap.Add(unitIdVariant.AsInt32(), unitData);
+                listData.unitIdToDataMap.Add(unitData.unitId, unitData);
             }
 
             loadedArmyListData.Add(listData);
@@ -60,9 +60,9 @@ public partial class DataFileLoader : Node
         file.Dispose();
     }
 
-    private Godot.Collections.Dictionary<int, int> ParseUnitPrice(string size, string points)
+    private List<ModelsToPointData> ParseUnitPrice(string size, string points)
     {
-        Godot.Collections.Dictionary<int, int> costMapping = new Godot.Collections.Dictionary<int, int>();
+        List<ModelsToPointData> costMapping = new List<ModelsToPointData>();
 
         // There is a split operation
         if (size.Contains(","))
@@ -83,10 +83,9 @@ public partial class DataFileLoader : Node
 
             for (int i = 0; i < sizes.Length; i++)
             {
-                costMapping.Add(
-                    int.Parse(sizes[i]),
-                    int.Parse(prices[i])
-                );
+                costMapping.Add(new ModelsToPointData(
+                    int.Parse(sizes[i]), int.Parse(prices[i])
+                ));
             }
         }
 
@@ -113,20 +112,18 @@ public partial class DataFileLoader : Node
 
             for (int i = min; i <= max; i++)
             {
-                costMapping.Add(
-                    i,
-                    i * price
-                );
+                costMapping.Add(new ModelsToPointData(
+                    i, i * price
+                ));
             }
         }
 
         // This is the normal 1:1 mapping
         else
         {
-            costMapping.Add(
-                int.Parse(size),
-                int.Parse(points)
-            );
+            costMapping.Add(new ModelsToPointData(
+                int.Parse(size), int.Parse(points)
+            ));
         }
 
         return costMapping;
