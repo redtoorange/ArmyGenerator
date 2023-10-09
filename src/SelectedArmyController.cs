@@ -1,15 +1,17 @@
 using System;
 using System.Collections.Generic;
 using ArmyGenerator.ArmyData;
-using ArmyGenerator.ArmyList;
 using ArmyGenerator.Model;
+using ArmyGenerator.View;
 using Godot;
+
+namespace ArmyGenerator;
 
 public partial class SelectedArmyController : Node
 {
     public event Action<int> OnPointsChange;
 
-    [Export] private AvailableUnitList availableUnitList;
+    [Export] private View.AvailableUnitList availableUnitList;
     [Export] private SelectedUnitList selectedUnitList;
 
     [Export] private SpinBox desiredArmyPoints;

@@ -1,5 +1,7 @@
 using Godot;
 
+namespace ArmyGenerator.UI;
+
 public partial class MainMenu : Control
 {
     [ExportSubgroup("Scenes")]

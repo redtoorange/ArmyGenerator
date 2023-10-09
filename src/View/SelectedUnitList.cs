@@ -2,12 +2,12 @@
 using ArmyGenerator.ArmyData;
 using Godot;
 
-namespace ArmyGenerator.ArmyList;
+namespace ArmyGenerator.View;
 
 public partial class SelectedUnitList : VBoxContainer
 {
     public event Action<string, UnitData> OnUnitRemoved;
-    
+
     [Export] private PackedScene selectUnitListItem;
 
     public void Initialize()
@@ -21,7 +21,7 @@ public partial class SelectedUnitList : VBoxContainer
         listItem.OnRemovePressed += HandleUnitRemoved;
         AddChild(listItem);
     }
-    
+
     private void HandleUnitRemoved(SelectedUnitListItem listItem)
     {
         OnUnitRemoved?.Invoke(listItem.GetUnitReferenceId(), listItem.GetUnitData());

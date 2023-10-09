@@ -1,5 +1,7 @@
 using Godot;
 
+namespace ArmyGenerator;
+
 public partial class EditArmyView : Control
 {
     [Export] private SplitContainer mainViewContainer;

@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 namespace ArmyGenerator.ArmyData;
 
@@ -21,7 +20,7 @@ public class UnitData
     public string name;
     public string type;
     public int maxCount;
-    
+
     public List<ModelsToPointData> modelCountToPriceMap;
 
     public UnitData(string unitId, string name, string type, int maxCount)

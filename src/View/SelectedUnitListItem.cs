@@ -1,13 +1,14 @@
 using System;
 using ArmyGenerator.ArmyData;
-using ArmyGenerator.ArmyList;
 using Godot;
 using Godot.Collections;
+
+namespace ArmyGenerator.View;
 
 public partial class SelectedUnitListItem : MarginContainer
 {
     public event Action<SelectedUnitListItem> OnRemovePressed;
-    
+
     [Export] private Label modelName;
     [Export] private Label modelTypeLabel;
     [Export] private Array<TypeToColorSetting> unitTypeColorMap;
@@ -25,7 +26,7 @@ public partial class SelectedUnitListItem : MarginContainer
     {
         unitData = unitDataValue;
         this.unitReferenceId = unitReferenceId;
-        
+
         modelName.Text = unitDataValue.name;
         modelTypeLabel.Text = unitDataValue.type;
 

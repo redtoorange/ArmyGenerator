@@ -1,8 +1,9 @@
 using System;
 using ArmyGenerator.ArmyData;
-using ArmyGenerator.ArmyList;
 using Godot;
 using Godot.Collections;
+
+namespace ArmyGenerator.View;
 
 public partial class AvilableUnitListItem : MarginContainer
 {

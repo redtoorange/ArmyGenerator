@@ -1,6 +1,6 @@
 ﻿using Godot;
 
-namespace ArmyGenerator.ArmyList;
+namespace ArmyGenerator.View;
 
 [GlobalClass]
 public partial class TypeToColorSetting : Resource
