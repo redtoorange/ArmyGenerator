@@ -11,7 +11,7 @@ public partial class SelectedArmyController : Node
 {
     public event Action<int> OnPointsChange;
 
-    [Export] private View.AvailableUnitList availableUnitList;
+    [Export] private AvailableUnitList availableUnitList;
     [Export] private SelectedUnitList selectedUnitList;
 
     [Export] private SpinBox desiredArmyPoints;
@@ -32,8 +32,17 @@ public partial class SelectedArmyController : Node
 
         selectedUnitList.Initialize();
         selectedUnitList.OnUnitRemoved += HandleUnitRemoved;
+        selectedUnitList.OnUnitListModelsChanged += HandleUnitListChange;
 
         fillArmyButton.Pressed += HandleFillArmyPressed;
+    }
+
+    private void HandleUnitListChange(UnitData unitData, string unitReferenceId, int oldIndex, int newIndex)
+    {
+        selectedArmy.UpdateItem(unitData, unitReferenceId, oldIndex, newIndex);
+        
+        OnPointsChange?.Invoke(selectedArmy.GetPoints());
+        pointsDisplay.Value = selectedArmy.GetPoints();
     }
 
     private void HandleFillArmyPressed()

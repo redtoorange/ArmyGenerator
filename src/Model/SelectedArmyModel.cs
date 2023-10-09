@@ -89,13 +89,9 @@ public class SelectedArmyModel
             }
             else
             {
-                GD.PrintErr("Tried to remove a unit that is not found");
+                GD.PrintErr("Tried to remove a unit that is not found: " + unitReferenceId);
             }
         }
-    }
-
-    public void UpdateItem()
-    {
     }
 
     private string GenerateReferenceId(List<SelectArmyUnitModel> others, string prefix)
@@ -122,5 +118,27 @@ public class SelectedArmyModel
     public int GetPoints()
     {
         return pointCount;
+    }
+
+    public void UpdateItem(UnitData unitData, string unitReferenceId, int oldIndex, int newIndex)
+    {
+        if (mapOfSourceIdToUnit.TryGetValue(unitData.unitId, out List<SelectArmyUnitModel> matchingUnits))
+        {
+            int index = matchingUnits.FindIndex(i => i.unitReferenceId.Equals(unitReferenceId));
+            if (index >= 0)
+            {
+                SelectArmyUnitModel unit = matchingUnits[index];
+                pointCount -= unit.pointCount;
+
+                unit.modelCount = unitData.modelCountToPriceMap[newIndex].models;
+                unit.pointCount = unitData.modelCountToPriceMap[newIndex].points;
+
+                pointCount += unit.pointCount;
+            }
+            else
+            {
+                GD.PrintErr("Tried to unit a unit that is not found: " + unitReferenceId);
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ resource_local_to_scene = true
 font_size = 12
 font_color = Color(1, 0, 0.227451, 1)
 
-[node name="AvilableUnitListItem" type="MarginContainer" node_paths=PackedStringArray("modelName", "modelTypeLabel", "removeButton")]
+[node name="AvilableUnitListItem" type="MarginContainer" node_paths=PackedStringArray("modelName", "modelTypeLabel", "removeButton", "pointsOption")]
 custom_minimum_size = Vector2(200, 60)
 offset_right = 504.0
 offset_bottom = 60.0
@@ -25,6 +25,7 @@ modelName = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/ModelNam
 modelTypeLabel = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/UnitType")
 unitTypeColorMap = Array[Object]([ExtResource("3_sb1d1"), ExtResource("2_7oqrd"), ExtResource("4_g34wl"), ExtResource("5_2la3a"), ExtResource("6_smshr")])
 removeButton = NodePath("Panel/MarginContainer/HBoxContainer/RemoveButton")
+pointsOption = NodePath("Panel/MarginContainer/HBoxContainer/PointsOptionDropDown")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
@@ -43,6 +44,7 @@ theme_override_constants/margin_bottom = 8
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 16
 
 [node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
@@ -65,6 +67,14 @@ mouse_filter = 1
 text = "INVALID"
 label_settings = SubResource("LabelSettings_a0gb5")
 vertical_alignment = 1
+
+[node name="PointsOptionDropDown" type="OptionButton" parent="Panel/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(200, 45)
+layout_mode = 2
+item_count = 1
+selected = 0
+popup/item_0/text = "XX models - XXX pts"
+popup/item_0/id = 0
 
 [node name="RemoveButton" type="Button" parent="Panel/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)
