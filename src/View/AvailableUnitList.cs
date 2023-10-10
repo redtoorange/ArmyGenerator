@@ -14,7 +14,7 @@ public partial class AvailableUnitList : VBoxContainer
 
     private Dictionary<string, AvilableUnitListItem> unitIdToListItemMap;
 
-    public void Initialize(ArmyListData currentArmy)
+    public void Initialize(ArmyListData currentArmy, UnitInventoryController unitInventoryController)
     {
         unitIdToListItemMap = new Dictionary<string, AvilableUnitListItem>();
 
@@ -22,7 +22,7 @@ public partial class AvailableUnitList : VBoxContainer
         {
             GD.Print($"Adding {unitData.Value.name}");
             AvilableUnitListItem listItem = unitListItemPrefab.Instantiate<AvilableUnitListItem>();
-            listItem.Initialize(unitData.Value);
+            listItem.Initialize(unitData.Value, unitInventoryController);
             listItem.OnAddPressed += HandleUnitAdded;
 
             unitIdToListItemMap.Add(unitData.Key, listItem);

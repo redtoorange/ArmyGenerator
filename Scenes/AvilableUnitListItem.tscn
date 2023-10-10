@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://b6rsacjxn7nl2"]
 
 [ext_resource type="Script" path="res://src/View/AvilableUnitListItem.cs" id="1_733j8"]
-[ext_resource type="Resource" uid="uid://b18i002l5mfbt" path="res://Data/ColorSettings/Character.tres" id="2_rmba8"]
-[ext_resource type="Resource" uid="uid://c1kqrqofova1o" path="res://Data/ColorSettings/BattleLine.tres" id="3_k6agq"]
-[ext_resource type="Resource" uid="uid://dwgispuxikww4" path="res://Data/ColorSettings/DedicatedTransport.tres" id="4_mcx0g"]
-[ext_resource type="Resource" uid="uid://b7s1udaq41gpf" path="res://Data/ColorSettings/Other.tres" id="5_gsale"]
-[ext_resource type="Resource" uid="uid://clmadel56bk3k" path="res://Data/ColorSettings/EpicCharacter.tres" id="6_kq416"]
+[ext_resource type="Resource" uid="uid://b18i002l5mfbt" path="res://ColorSettings/Character.tres" id="2_rmba8"]
+[ext_resource type="Resource" uid="uid://c1kqrqofova1o" path="res://ColorSettings/BattleLine.tres" id="3_k6agq"]
+[ext_resource type="Resource" uid="uid://dwgispuxikww4" path="res://ColorSettings/DedicatedTransport.tres" id="4_mcx0g"]
+[ext_resource type="Resource" uid="uid://b7s1udaq41gpf" path="res://ColorSettings/Other.tres" id="5_gsale"]
+[ext_resource type="Resource" uid="uid://clmadel56bk3k" path="res://ColorSettings/EpicCharacter.tres" id="6_kq416"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_h86it"]
 resource_local_to_scene = true
@@ -80,7 +80,7 @@ horizontal_alignment = 1
 [node name="InventorySpinner" type="SpinBox" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
 tooltip_text = "Inventory
-How many of this units are availabe to use?"
+How many of this units are availabe to use for the generator?"
 max_value = 6.0
 alignment = 1
 select_all_on_focus = true

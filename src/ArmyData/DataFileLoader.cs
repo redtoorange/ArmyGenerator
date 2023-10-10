@@ -10,6 +10,8 @@ public partial class DataFileLoader : Node
 
     public List<ArmyListData> loadedArmyListData;
 
+    private int selectedArmy = 0;
+
     public override void _EnterTree()
     {
         S = this;
@@ -18,7 +20,7 @@ public partial class DataFileLoader : Node
 
     private void LoadDataFile()
     {
-        FileAccess file = FileAccess.Open("res://data/Unit_Data.json", FileAccess.ModeFlags.Read);
+        FileAccess file = FileAccess.Open("res://Units.data", FileAccess.ModeFlags.Read);
         string fileText = file.GetAsText();
         Dictionary parsedFile = Json.ParseString(fileText).AsGodotDictionary();
 
@@ -127,5 +129,15 @@ public partial class DataFileLoader : Node
         }
 
         return costMapping;
+    }
+
+    public void SetSelectedArmy(int armyOptionsSelected)
+    {
+        selectedArmy = armyOptionsSelected;
+    }
+
+    public ArmyListData GetSelectedArmyList()
+    {
+        return loadedArmyListData[selectedArmy];
     }
 }

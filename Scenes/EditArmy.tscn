@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2p6hkq05kg87"]
+[gd_scene load_steps=9 format=3 uid="uid://d2p6hkq05kg87"]
 
 [ext_resource type="Script" path="res://src/EditArmyView.cs" id="1_ejasg"]
 [ext_resource type="PackedScene" uid="uid://b6rsacjxn7nl2" path="res://Scenes/AvilableUnitListItem.tscn" id="1_oryx4"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" path="res://src/View/SelectedUnitList.cs" id="3_n3kc6"]
 [ext_resource type="PackedScene" uid="uid://bqpqtdk27nkrj" path="res://Scenes/SelectedUnitListItem.tscn" id="4_3bg0h"]
 [ext_resource type="Script" path="res://src/SelectedArmyController.cs" id="6_hkpeb"]
+[ext_resource type="Script" path="res://src/UnitInventoryController.cs" id="7_brtbn"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ov52g"]
 font_size = 20
@@ -20,7 +21,20 @@ grow_vertical = 2
 script = ExtResource("1_ejasg")
 mainViewContainer = NodePath("MarginContainer/HSplitContainer")
 
+[node name="UnitInventoryController" type="Node" parent="."]
+script = ExtResource("7_brtbn")
+
+[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "unitInventoryController", "desiredArmyPoints", "pointsDisplay", "fillArmyButton")]
+script = ExtResource("6_hkpeb")
+availableUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer/MarginContainer/AvailableUnitList")
+selectedUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/ScrollContainer/MarginContainer/SelectedUnitList")
+unitInventoryController = NodePath("../UnitInventoryController")
+desiredArmyPoints = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/DesirePoints")
+pointsDisplay = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/PointsDisplay")
+fillArmyButton = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/Button")
+
 [node name="MenuBar" type="MenuBar" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
@@ -201,11 +215,3 @@ theme_override_constants/margin_bottom = 2
 layout_mode = 2
 script = ExtResource("3_n3kc6")
 selectUnitListItem = ExtResource("4_3bg0h")
-
-[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "desiredArmyPoints", "pointsDisplay", "fillArmyButton")]
-script = ExtResource("6_hkpeb")
-availableUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer/MarginContainer/AvailableUnitList")
-selectedUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/ScrollContainer/MarginContainer/SelectedUnitList")
-desiredArmyPoints = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/DesirePoints")
-pointsDisplay = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/PointsDisplay")
-fillArmyButton = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/Button")

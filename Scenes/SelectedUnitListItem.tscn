@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://bqpqtdk27nkrj"]
 
 [ext_resource type="Script" path="res://src/View/SelectedUnitListItem.cs" id="1_1p766"]
-[ext_resource type="Resource" uid="uid://b18i002l5mfbt" path="res://Data/ColorSettings/Character.tres" id="2_7oqrd"]
-[ext_resource type="Resource" uid="uid://c1kqrqofova1o" path="res://Data/ColorSettings/BattleLine.tres" id="3_sb1d1"]
-[ext_resource type="Resource" uid="uid://dwgispuxikww4" path="res://Data/ColorSettings/DedicatedTransport.tres" id="4_g34wl"]
-[ext_resource type="Resource" uid="uid://b7s1udaq41gpf" path="res://Data/ColorSettings/Other.tres" id="5_2la3a"]
-[ext_resource type="Resource" uid="uid://clmadel56bk3k" path="res://Data/ColorSettings/EpicCharacter.tres" id="6_smshr"]
+[ext_resource type="Resource" uid="uid://b18i002l5mfbt" path="res://ColorSettings/Character.tres" id="2_7oqrd"]
+[ext_resource type="Resource" uid="uid://c1kqrqofova1o" path="res://ColorSettings/BattleLine.tres" id="3_sb1d1"]
+[ext_resource type="Resource" uid="uid://dwgispuxikww4" path="res://ColorSettings/DedicatedTransport.tres" id="4_g34wl"]
+[ext_resource type="Resource" uid="uid://b7s1udaq41gpf" path="res://ColorSettings/Other.tres" id="5_2la3a"]
+[ext_resource type="Resource" uid="uid://clmadel56bk3k" path="res://ColorSettings/EpicCharacter.tres" id="6_smshr"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_a0gb5"]
 resource_local_to_scene = true

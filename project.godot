@@ -11,10 +11,11 @@ config_version=5
 [application]
 
 config/name="Army Generator"
-run/main_scene="res://Scenes/EditArmy.tscn"
+config/version="0.0.1"
+run/main_scene="res://Scenes/MainScene.tscn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 boot_splash/show_image=false
-config/icon="res://icon.svg"
+config/icon="res://Art/TyranidLogo.png"
 
 [autoload]
 

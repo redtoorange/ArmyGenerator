@@ -13,6 +13,7 @@ public partial class SelectedArmyController : Node
 
     [Export] private AvailableUnitList availableUnitList;
     [Export] private SelectedUnitList selectedUnitList;
+    [Export] private UnitInventoryController unitInventoryController;
 
     [Export] private SpinBox desiredArmyPoints;
     [Export] private SpinBox pointsDisplay;
@@ -25,9 +26,9 @@ public partial class SelectedArmyController : Node
     public override void _Ready()
     {
         selectedArmy = new SelectedArmyModel();
-        armyListData = DataFileLoader.S.loadedArmyListData[0];
+        armyListData = DataFileLoader.S.GetSelectedArmyList();
 
-        availableUnitList.Initialize(armyListData);
+        availableUnitList.Initialize(armyListData, unitInventoryController);
         availableUnitList.OnUnitAddNewUnitToSelected += HandleAddNewUnitAddNewUnitToToSelected;
 
         selectedUnitList.Initialize();
@@ -95,7 +96,7 @@ public partial class SelectedArmyController : Node
         }
 
         // Are we allow to add more of this unit type?
-        if (selectedArmy.GetUnitsOfTypeCount(unit) >= unit.maxCount)
+        if (selectedArmy.GetUnitsOfTypeCount(unit) >= unitInventoryController.GetMaxCount(unit))
         {
             return false;
         }

@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://bacva0xfhk0r1"]
+
+[ext_resource type="Script" path="res://src/UI/ListSelector.cs" id="1_3w0lx"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s23rc"]
+font_size = 36
+
+[node name="ListSelector" type="Control" node_paths=PackedStringArray("armyOptions", "startButton")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3w0lx")
+armyOptions = NodePath("OptionButton")
+startButton = NodePath("Button")
+pathToEditScene = "res://Scenes/EditArmy.tscn"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -78.0
+offset_top = -19.5
+offset_right = 78.0
+offset_bottom = 19.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -61.0
+offset_top = 33.5
+offset_right = 61.0
+offset_bottom = 70.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Start"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = -67.5
+offset_right = 46.0
+offset_bottom = -44.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Army Select"
+label_settings = SubResource("LabelSettings_s23rc")
