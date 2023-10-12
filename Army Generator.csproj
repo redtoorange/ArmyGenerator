@@ -1,10 +1,7 @@
-<Project Sdk="Godot.NET.Sdk/4.2.0-dev.4">
+<Project Sdk="Godot.NET.Sdk/4.2.0-beta">
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>ArmyGenerator</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="src\View\" />
-  </ItemGroup>
 </Project>

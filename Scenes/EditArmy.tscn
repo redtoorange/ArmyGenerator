@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://d2p6hkq05kg87"]
+[gd_scene load_steps=11 format=3 uid="uid://d2p6hkq05kg87"]
 
 [ext_resource type="Script" path="res://src/EditArmyView.cs" id="1_ejasg"]
 [ext_resource type="PackedScene" uid="uid://b6rsacjxn7nl2" path="res://Scenes/AvilableUnitListItem.tscn" id="1_oryx4"]
 [ext_resource type="Script" path="res://src/View/AvailableUnitList.cs" id="1_pb30e"]
+[ext_resource type="Theme" uid="uid://bqrbkefhferuf" path="res://Theme/MainTheme.tres" id="1_rtp0e"]
 [ext_resource type="Script" path="res://src/View/SelectedUnitList.cs" id="3_n3kc6"]
 [ext_resource type="PackedScene" uid="uid://bqpqtdk27nkrj" path="res://Scenes/SelectedUnitListItem.tscn" id="4_3bg0h"]
+[ext_resource type="Script" path="res://src/ScrollContainer.cs" id="4_ds3xw"]
 [ext_resource type="Script" path="res://src/SelectedArmyController.cs" id="6_hkpeb"]
 [ext_resource type="Script" path="res://src/UnitInventoryController.cs" id="7_brtbn"]
 
@@ -18,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_rtp0e")
 script = ExtResource("1_ejasg")
 mainViewContainer = NodePath("MarginContainer/HSplitContainer")
 
@@ -91,6 +94,10 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+script = ExtResource("4_ds3xw")
+width = 50.0
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer"]
 layout_mode = 2
