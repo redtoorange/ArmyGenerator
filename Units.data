@@ -377,6 +377,304 @@
       "Max": "3"
     }
   ],
+  "Tau": [
+    {
+      "UnitId": "TAU_1",
+      "Name": "Aun'shi",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "50",
+      "Max": "1"
+    },
+    {
+      "UnitId": "TAU_2",
+      "Name": "Aun'va",
+      "Type": "Epic Character",
+      "Size": "3",
+      "Points": "65",
+      "Max": "1"
+    },
+    {
+      "UnitId": "TAU_3",
+      "Name": "Cadre Fireblade",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "40",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_4",
+      "Name": "Commander Farsight",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "90",
+      "Max": "1"
+    },
+    {
+      "UnitId": "TAU_5",
+      "Name": "Commander In Coldstar Battlesuit",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "110",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_6",
+      "Name": "Commander In Crisi Battlesuit",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "90",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_7",
+      "Name": "Commander In Enforcer Battlesuit",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "100",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_8",
+      "Name": "Commander Shadowsun",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "100",
+      "Max": "1"
+    },
+    {
+      "UnitId": "TAU_9",
+      "Name": "Darkstrider",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "60",
+      "Max": "1"
+    },
+    {
+      "UnitId": "TAU_10",
+      "Name": "Ethereal",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "50",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_11",
+      "Name": "Firesight Team",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "70",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_12",
+      "Name": "Krooter Shaper",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "40",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_13",
+      "Name": "Longstrike",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "140",
+      "Max": "1"
+    },
+    {
+      "UnitId": "TAU_14",
+      "Name": "Breacher Team",
+      "Type": "Battleline",
+      "Size": "10",
+      "Points": "90",
+      "Max": "6"
+    },
+    {
+      "UnitId": "TAU_15",
+      "Name": "Strike Team",
+      "Type": "Battleline",
+      "Size": "10",
+      "Points": "80",
+      "Max": "6"
+    },
+    {
+      "UnitId": "TAU_16",
+      "Name": "Devilfish",
+      "Type": "Dedicated Transport",
+      "Size": "1",
+      "Points": "75",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_17",
+      "Name": "Tidewall Droneport",
+      "Type": "Fortification",
+      "Size": "1",
+      "Points": "85",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_18",
+      "Name": "Tidewall Gunrig",
+      "Type": "Fortification",
+      "Size": "1",
+      "Points": "90",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_19",
+      "Name": "Tidewall Shieldline",
+      "Type": "Fortification",
+      "Size": "1",
+      "Points": "85",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_20",
+      "Name": "Broadside Battlesuits",
+      "Type": "Other",
+      "Size": "1-3",
+      "Points": "90",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_21",
+      "Name": "Crisis Battlesuits",
+      "Type": "Other",
+      "Size": "3,6",
+      "Points": "180,360",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_22",
+      "Name": "Ghostkeel Battlesuit",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_23",
+      "Name": "Hammerhead Gunship",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "130",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_24",
+      "Name": "Kroot Carnivores",
+      "Type": "Other",
+      "Size": "10,20",
+      "Points": "55,110",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_25",
+      "Name": "Kroot Farstalkers",
+      "Type": "Other",
+      "Size": "12",
+      "Points": "70",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_26",
+      "Name": "Kroot Hounds",
+      "Type": "Other",
+      "Size": "30,60,90",
+      "Points": "4,8,12",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_27",
+      "Name": "Krootox Riders",
+      "Type": "Other",
+      "Size": "1-3",
+      "Points": "35",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_28",
+      "Name": "Pathfinder Team",
+      "Type": "Other",
+      "Size": "10",
+      "Points": "90",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_29",
+      "Name": "Piranha",
+      "Type": "Other",
+      "Size": "1-3",
+      "Points": "55",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_30",
+      "Name": "Razorshark Strike Fighter",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "165",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_31",
+      "Name": "Riptide Battlesuit",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "180",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_32",
+      "Name": "Sky Ray Gunship",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "130",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_33",
+      "Name": "Stealth Battlesuits",
+      "Type": "Other",
+      "Size": "3,6",
+      "Points": "60,120",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_34",
+      "Name": "Stormsurge",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "400",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_35",
+      "Name": "Sun Shark Bomber",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "150",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_36",
+      "Name": "Tactical Drones",
+      "Type": "Other",
+      "Size": "4,8,12",
+      "Points": "70,140,210",
+      "Max": "3"
+    },
+    {
+      "UnitId": "TAU_37",
+      "Name": "Vespid Stingwings",
+      "Type": "Other",
+      "Size": "5",
+      "Points": "75",
+      "Max": "3"
+    }
+  ],
   "Orks": [
     {
       "UnitId": "ORK_1",
@@ -923,6 +1221,488 @@
       "Size": "1",
       "Points": "150",
       "Max": "6"
+    }
+  ],
+  "Astra Militarum": [
+    {
+      "UnitId": "AM_1",
+      "Name": "‘Iron Hand’ Straken",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "55",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AM_2",
+      "Name": "Cadian Castellan",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "45",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_3",
+      "Name": "Cadian Command Squad",
+      "Type": "Character",
+      "Size": "5",
+      "Points": "65",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_4",
+      "Name": "Commissar",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "30",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_5",
+      "Name": "Gaunt’s Ghosts",
+      "Type": "Epic Character",
+      "Size": "6",
+      "Points": "100",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AM_6",
+      "Name": "Lord Solar Leontus",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "125",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AM_7",
+      "Name": "Militarum Tempestus Command Squad",
+      "Type": "Character",
+      "Size": "5",
+      "Points": "80",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_8",
+      "Name": "Platoon Command Squad",
+      "Type": "Character",
+      "Size": "5",
+      "Points": "60",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_9",
+      "Name": "Primaris Psyker",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "60",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_10",
+      "Name": "Regimental Enginseer",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "45",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_11",
+      "Name": "Regimental Preacher",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "35",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_12",
+      "Name": "Sergeant Harker",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "40",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AM_13",
+      "Name": "Sly Marbo",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "65",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AM_14",
+      "Name": "Tank Commander",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "205",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_15",
+      "Name": "Ursula Creed",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "55",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AM_16",
+      "Name": "Cadian Shock Troops",
+      "Type": "Battleline",
+      "Size": "10,20",
+      "Points": "60,120",
+      "Max": "6"
+    },
+    {
+      "UnitId": "AM_17",
+      "Name": "Catachan Jungle Fighters",
+      "Type": "Battleline",
+      "Size": "10,20",
+      "Points": "55,110",
+      "Max": "6"
+    },
+    {
+      "UnitId": "AM_18",
+      "Name": "Death Korps Of Krieg",
+      "Type": "Battleline",
+      "Size": "10,20",
+      "Points": "65,130",
+      "Max": "6"
+    },
+    {
+      "UnitId": "AM_19",
+      "Name": "Infantry Squad",
+      "Type": "Battleline",
+      "Size": "10,20",
+      "Points": "60,120",
+      "Max": "6"
+    },
+    {
+      "UnitId": "AM_20",
+      "Name": "Chimera",
+      "Type": "Dedicated Transport",
+      "Size": "1",
+      "Points": "70",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_21",
+      "Name": "Taurox",
+      "Type": "Dedicated Transport",
+      "Size": "1",
+      "Points": "65",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_22",
+      "Name": "Taurox Prime",
+      "Type": "Dedicated Transport",
+      "Size": "1",
+      "Points": "90",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_23",
+      "Name": "Aegis Defence Line",
+      "Type": "Fortification",
+      "Size": "1",
+      "Points": "145",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_24",
+      "Name": "Armoured Sentinels",
+      "Type": "Other",
+      "Size": "1-3",
+      "Points": "70",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_25",
+      "Name": "Attilan Rough Riders",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "70,140",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_26",
+      "Name": "Baneblade",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "480",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_27",
+      "Name": "Banehammer",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "450",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_28",
+      "Name": "Banesword",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "480",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_29",
+      "Name": "Basilisk",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "135",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_30",
+      "Name": "Bullgryn Squad",
+      "Type": "Other",
+      "Size": "3,6",
+      "Points": "80,160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_31",
+      "Name": "Deathstrike",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_32",
+      "Name": "Doomhammer",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "455",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_33",
+      "Name": "Field Ordnance Battery",
+      "Type": "Other",
+      "Size": "2",
+      "Points": "120",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_34",
+      "Name": "Heavy Weapons Squad",
+      "Type": "Other",
+      "Size": "3",
+      "Points": "60",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_35",
+      "Name": "Hellhammer",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "450",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_36",
+      "Name": "Hellhound",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "125",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_37",
+      "Name": "Hydra",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "95",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_38",
+      "Name": "Kasrkin",
+      "Type": "Other",
+      "Size": "10",
+      "Points": "100",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_39",
+      "Name": "Leman Russ Battle Tank",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "180",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_40",
+      "Name": "Leman Russ Demolisher",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "200",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_41",
+      "Name": "Leman Russ Eradicator",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_42",
+      "Name": "Leman Russ Executioner",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "180",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_43",
+      "Name": "Leman Russ Exterminator",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "180",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_44",
+      "Name": "Leman Russ Punisher",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_45",
+      "Name": "Leman Russ Vanquisher",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "155",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_46",
+      "Name": "Manticore",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "150",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_47",
+      "Name": "Munitorum Servitors",
+      "Type": "Other",
+      "Size": "4",
+      "Points": "35",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_48",
+      "Name": "Nork Deddog",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "60",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AM_49",
+      "Name": "Ogryn Bodyguard",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "40",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_50",
+      "Name": "Ogryn Squad",
+      "Type": "Other",
+      "Size": "3,6",
+      "Points": "65,130",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_51",
+      "Name": "Ratling Snipers",
+      "Type": "Other",
+      "Size": "5",
+      "Points": "60",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_52",
+      "Name": "Regimental Attachés",
+      "Type": "Other",
+      "Size": "3",
+      "Points": "40",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_53",
+      "Name": "Rogal Dorn Battle Tank",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "260",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_54",
+      "Name": "Scout Sentinels",
+      "Type": "Other",
+      "Size": "1-3",
+      "Points": "60",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_55",
+      "Name": "Shadowsword",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "440",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_56",
+      "Name": "Stormlord",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "460",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_57",
+      "Name": "Stormsword",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "495",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_58",
+      "Name": "Tempestus Scions",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "55,110",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_59",
+      "Name": "Valkyrie",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "190",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AM_60",
+      "Name": "Wyvern",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "110",
+      "Max": "3"
     }
   ]
 }

@@ -20,9 +20,12 @@ config/icon="res://Art/TyranidLogo.png"
 [autoload]
 
 DataFileLoader="*res://src/ArmyData/DataFileLoader.cs"
+GlobalDataStore="*res://src/GlobalStore/GlobalDataStore.cs"
 
 [display]
 
+window/size/viewport_width=1244
+window/size/viewport_height=700
 window/stretch/mode="canvas_items"
 window/stretch/aspect="keep_height"
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using ArmyGenerator.ArmyData;
+using ArmyGenerator.GlobalStore;
 using ArmyGenerator.Model;
 using ArmyGenerator.View;
 using Godot;
@@ -19,6 +20,7 @@ public partial class SelectedArmyController : Node
     [Export] private SpinBox pointsDisplay;
 
     [Export] private Button fillArmyButton;
+    [Export] private Button clearArmyButton;
 
     private SelectedArmyModel selectedArmy;
     private ArmyListData armyListData;
@@ -36,6 +38,12 @@ public partial class SelectedArmyController : Node
         selectedUnitList.OnUnitListModelsChanged += HandleUnitListChange;
 
         fillArmyButton.Pressed += HandleFillArmyPressed;
+        clearArmyButton.Pressed += HandleClearArmyPressed;
+    }
+
+    private void HandleClearArmyPressed()
+    {
+        selectedUnitList.ClearList();
     }
 
     private void HandleUnitListChange(UnitData unitData, string unitReferenceId, int oldIndex, int newIndex)
@@ -61,11 +69,12 @@ public partial class SelectedArmyController : Node
 
         // Create a list of units we can use to fill the remaining points
         List<UnitData> units = new List<UnitData>();
-        foreach (KeyValuePair<string, UnitData> pair in armyListData.unitIdToDataMap)
+        ArmyFillOptions fillOptions = GlobalDataStore.S.GetFillOptions();
+        foreach (UnitData value in armyListData.unitIdToDataMap.Values)
         {
-            if (CanAddUnit(pair.Value))
+            if (!fillOptions.IsBanned(value) && CanAddUnit(value))
             {
-                units.Add(pair.Value);
+                units.Add(value);
             }
         }
 

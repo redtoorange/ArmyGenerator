@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://d2p6hkq05kg87"]
+[gd_scene load_steps=12 format=3 uid="uid://d2p6hkq05kg87"]
 
 [ext_resource type="Script" path="res://src/EditArmyView.cs" id="1_ejasg"]
 [ext_resource type="PackedScene" uid="uid://b6rsacjxn7nl2" path="res://Scenes/AvilableUnitListItem.tscn" id="1_oryx4"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" path="res://src/ScrollContainer.cs" id="4_ds3xw"]
 [ext_resource type="Script" path="res://src/SelectedArmyController.cs" id="6_hkpeb"]
 [ext_resource type="Script" path="res://src/UnitInventoryController.cs" id="7_brtbn"]
+[ext_resource type="PackedScene" uid="uid://cayexynb2gjhr" path="res://Scenes/FillOptionsWindow.tscn" id="10_p2j6k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ov52g"]
 font_size = 20
@@ -27,14 +28,15 @@ mainViewContainer = NodePath("MarginContainer/HSplitContainer")
 [node name="UnitInventoryController" type="Node" parent="."]
 script = ExtResource("7_brtbn")
 
-[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "unitInventoryController", "desiredArmyPoints", "pointsDisplay", "fillArmyButton")]
+[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "unitInventoryController", "desiredArmyPoints", "pointsDisplay", "fillArmyButton", "clearArmyButton")]
 script = ExtResource("6_hkpeb")
 availableUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/ScrollContainer/MarginContainer/AvailableUnitList")
 selectedUnitList = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/ScrollContainer/MarginContainer/SelectedUnitList")
 unitInventoryController = NodePath("../UnitInventoryController")
 desiredArmyPoints = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/DesirePoints")
 pointsDisplay = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/PointsDisplay")
-fillArmyButton = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel/Button")
+fillArmyButton = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer/FillArmy")
+clearArmyButton = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer/ClearArmy")
 
 [node name="MenuBar" type="MenuBar" parent="."]
 visible = false
@@ -125,7 +127,7 @@ label_settings = SubResource("LabelSettings_ov52g")
 horizontal_alignment = 1
 
 [node name="Panel" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer_2"]
-custom_minimum_size = Vector2(0, 65)
+custom_minimum_size = Vector2(0, 45)
 layout_mode = 2
 
 [node name="PointsDisplay" type="SpinBox" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel"]
@@ -181,22 +183,6 @@ grow_horizontal = 0
 grow_vertical = 2
 tooltip_text = "Points in current army"
 
-[node name="Button" type="Button" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel"]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -50.0
-offset_top = -17.5
-offset_right = 50.0
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-tooltip_text = "Fill remaining points with Random units"
-text = "Fill Army"
-
 [node name="SelectedUnitPanel" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer_2"]
 layout_mode = 2
 size_flags_vertical = 3
@@ -222,3 +208,46 @@ theme_override_constants/margin_bottom = 2
 layout_mode = 2
 script = ExtResource("3_n3kc6")
 selectUnitListItem = ExtResource("4_3bg0h")
+
+[node name="Panel_2" type="Panel" parent="MarginContainer/HSplitContainer/VBoxContainer_2"]
+custom_minimum_size = Vector2(0, 45)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+alignment = 1
+
+[node name="Options" type="Button" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+tooltip_text = "Fill remaining points with Random units"
+text = "Fill Options"
+
+[node name="FillArmy" type="Button" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+tooltip_text = "Fill remaining points with Random units"
+text = "Fill Army"
+
+[node name="ClearArmy" type="Button" parent="MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+tooltip_text = "Fill remaining points with Random units"
+text = "Clear Army"
+
+[node name="FillOptionsWindow" parent="." node_paths=PackedStringArray("openOptionsButton") instance=ExtResource("10_p2j6k")]
+visible = false
+openOptionsButton = NodePath("../MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer/Options")
