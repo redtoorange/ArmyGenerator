@@ -1,21 +1,19 @@
-[gd_scene load_steps=8 format=3 uid="uid://bqpqtdk27nkrj"]
+[gd_scene load_steps=9 format=3 uid="uid://bqpqtdk27nkrj"]
 
 [ext_resource type="Script" path="res://src/View/SelectedUnitListItem.cs" id="1_1p766"]
+[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_hsxul"]
 [ext_resource type="Resource" uid="uid://b18i002l5mfbt" path="res://ColorSettings/Character.tres" id="2_7oqrd"]
 [ext_resource type="Resource" uid="uid://c1kqrqofova1o" path="res://ColorSettings/BattleLine.tres" id="3_sb1d1"]
 [ext_resource type="Resource" uid="uid://dwgispuxikww4" path="res://ColorSettings/DedicatedTransport.tres" id="4_g34wl"]
 [ext_resource type="Resource" uid="uid://b7s1udaq41gpf" path="res://ColorSettings/Other.tres" id="5_2la3a"]
 [ext_resource type="Resource" uid="uid://clmadel56bk3k" path="res://ColorSettings/EpicCharacter.tres" id="6_smshr"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_a0gb5"]
-resource_local_to_scene = true
-font_size = 12
-font_color = Color(1, 0, 0.227451, 1)
+[ext_resource type="LabelSettings" uid="uid://dochhyffb2stm" path="res://Themes/UnitTypeLabelSettings.tres" id="8_uxqnh"]
 
 [node name="AvilableUnitListItem" type="MarginContainer" node_paths=PackedStringArray("modelName", "modelTypeLabel", "removeButton", "pointsOption")]
 custom_minimum_size = Vector2(200, 60)
 offset_right = 504.0
 offset_bottom = 60.0
+theme = ExtResource("1_hsxul")
 theme_override_constants/margin_left = 2
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2
@@ -65,12 +63,13 @@ size_flags_vertical = 8
 tooltip_text = "Unit type"
 mouse_filter = 1
 text = "INVALID"
-label_settings = SubResource("LabelSettings_a0gb5")
+label_settings = ExtResource("8_uxqnh")
 vertical_alignment = 1
 
 [node name="PointsOptionDropDown" type="OptionButton" parent="Panel/MarginContainer/HBoxContainer"]
-custom_minimum_size = Vector2(200, 45)
+custom_minimum_size = Vector2(200, 0)
 layout_mode = 2
+size_flags_vertical = 4
 item_count = 1
 selected = 0
 popup/item_0/text = "XX models - XXX pts"
@@ -85,4 +84,3 @@ tooltip_text = "Remove this unit from the army"
 focus_mode = 0
 theme_override_colors/font_color = Color(1, 0, 0, 1)
 text = "-"
-flat = true

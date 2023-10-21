@@ -93,6 +93,8 @@ public partial class SelectedArmyController : Node
                 }
             }
         }
+
+        selectedUnitList.SortSelectUnits();
     }
 
     public bool CanAddUnit(UnitData unit)

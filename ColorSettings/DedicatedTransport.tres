@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_65rgf")
 type = "Dedicated Transport"
-color = Color(0.670588, 0.792157, 0.866667, 1)
+color = Color(0.00392157, 0.866667, 0, 1)

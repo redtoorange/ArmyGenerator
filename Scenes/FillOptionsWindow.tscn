@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://cayexynb2gjhr"]
+[gd_scene load_steps=3 format=3 uid="uid://cayexynb2gjhr"]
 
+[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_eelja"]
 [ext_resource type="Script" path="res://src/UI/FillOptionWindow.cs" id="1_g5pav"]
 
 [node name="FillOptionsWindow" type="Window" node_paths=PackedStringArray("fillOptions")]
@@ -7,10 +8,19 @@ title = "Fill Options"
 position = Vector2i(322, 150)
 size = Vector2i(600, 400)
 transparent = true
+theme = ExtResource("1_eelja")
 script = ExtResource("1_g5pav")
-fillOptions = [NodePath("MarginContainer/HBoxContainer/VBoxContainer/NO_CHARACTERS"), NodePath("MarginContainer/HBoxContainer/VBoxContainer/NO_EPIC_CHARACTERS"), NodePath("MarginContainer/HBoxContainer/VBoxContainer/NO_TRANSPORTS"), NodePath("MarginContainer/HBoxContainer/VBoxContainer_2/NO_BATTLELINE"), NodePath("MarginContainer/HBoxContainer/VBoxContainer_2/NO_FORTIFICATIONS")]
+fillOptions = [NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_CHARACTERS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_EPIC_CHARACTERS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_TRANSPORTS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/NO_BATTLELINE"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/NO_FORTIFICATIONS")]
 
-[node name="MarginContainer" type="MarginContainer" parent="."]
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -21,39 +31,39 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer"]
 layout_mode = 2
 alignment = 1
 
-[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="NO_CHARACTERS" type="CheckBox" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="NO_CHARACTERS" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "No Characters"
 
-[node name="NO_EPIC_CHARACTERS" type="CheckBox" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="NO_EPIC_CHARACTERS" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "No Epic Characters"
 
-[node name="NO_TRANSPORTS" type="CheckBox" parent="MarginContainer/HBoxContainer/VBoxContainer"]
+[node name="NO_TRANSPORTS" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer"]
 layout_mode = 2
 text = "No Transports"
 
-[node name="VBoxContainer_2" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
+[node name="VBoxContainer_2" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="NO_BATTLELINE" type="CheckBox" parent="MarginContainer/HBoxContainer/VBoxContainer_2"]
+[node name="NO_BATTLELINE" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]
 layout_mode = 2
 text = "No Battleline"
 
-[node name="NO_FORTIFICATIONS" type="CheckBox" parent="MarginContainer/HBoxContainer/VBoxContainer_2"]
+[node name="NO_FORTIFICATIONS" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]
 layout_mode = 2
 text = "No Fortifcations"
 
-[node name="CheckBox_2" type="CheckBox" parent="MarginContainer/HBoxContainer/VBoxContainer_2"]
+[node name="CheckBox_2" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]
 visible = false
 layout_mode = 2
 disabled = true

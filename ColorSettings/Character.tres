@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_1knrk")
 type = "Character"
-color = Color(0.898039, 0.705882, 0.6, 1)
+color = Color(0.898039, 0.0980392, 0.137255, 1)

@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_dkv5a")
 type = "Other"
-color = Color(0.811765, 0.729412, 0.85098, 1)
+color = Color(0.54902, 0, 0.85098, 1)

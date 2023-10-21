@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections;
+using System.Collections.Generic;
 using ArmyGenerator.ArmyData;
 using Godot;
 using Godot.Collections;
@@ -48,5 +50,36 @@ public partial class SelectedUnitList : VBoxContainer
         }
 
         selectedUnitList.Clear();
+    }
+
+    public void SortSelectUnits()
+    {
+        List<SelectedUnitListItem> sortedItems = new List<SelectedUnitListItem>(selectedUnitList);
+        sortedItems.Sort(new SelectedUnitComparer());
+        
+        for (int i = 0; i < sortedItems.Count; i++)
+        {
+            RemoveChild(sortedItems[i]);
+        }
+
+        for (int i = 0; i < sortedItems.Count; i++)
+        {
+            AddChild(sortedItems[i]);
+        }
+    }
+    
+    class SelectedUnitComparer : IComparer<SelectedUnitListItem>
+    {
+        public int Compare(SelectedUnitListItem x, SelectedUnitListItem y)
+        {
+            if (x == null && y == null) return 0;
+            if (y == null) return 1;
+            if (x == null) return -1;
+
+            int xIndex = Int32.Parse(x.GetUnitData().unitId.Split("_")[1]);
+            int yIndex = Int32.Parse(y.GetUnitData().unitId.Split("_")[1]);
+            
+            return xIndex - yIndex;
+        }
     }
 }

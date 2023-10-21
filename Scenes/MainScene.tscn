@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://ljvqkoalw12x"]
+[gd_scene load_steps=6 format=3 uid="uid://ljvqkoalw12x"]
 
-[ext_resource type="LabelSettings" uid="uid://cnohwfboisp6m" path="res://Theme/TitleLabelSettings.tres" id="1_gcqc7"]
-[ext_resource type="Theme" uid="uid://bqrbkefhferuf" path="res://Theme/MainTheme.tres" id="1_qmhad"]
+[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_eq8un"]
+[ext_resource type="LabelSettings" uid="uid://cnohwfboisp6m" path="res://Themes/TitleLabelSettings.tres" id="1_gcqc7"]
+[ext_resource type="Theme" uid="uid://bqrbkefhferuf" path="res://Themes/MainTheme.tres" id="1_qmhad"]
 [ext_resource type="Script" path="res://src/UI/MainMenu.cs" id="1_s05cr"]
 [ext_resource type="PackedScene" uid="uid://bacva0xfhk0r1" path="res://Scenes/ListSelector.tscn" id="3_7b71m"]
 
@@ -12,11 +13,20 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+theme = ExtResource("1_eq8un")
 script = ExtResource("1_s05cr")
 newArmyScene = ExtResource("3_7b71m")
 newArmyButton = NodePath("VBoxContainer/NewArmy")
 loadArmyButton = NodePath("VBoxContainer/LoadArmy")
 editDataButton = NodePath("VBoxContainer/EditData")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
