@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://bqpqtdk27nkrj"]
+[gd_scene load_steps=8 format=3 uid="uid://bqpqtdk27nkrj"]
 
 [ext_resource type="Script" path="res://src/View/SelectedUnitListItem.cs" id="1_1p766"]
-[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_hsxul"]
 [ext_resource type="Resource" uid="uid://b18i002l5mfbt" path="res://ColorSettings/Character.tres" id="2_7oqrd"]
 [ext_resource type="Resource" uid="uid://c1kqrqofova1o" path="res://ColorSettings/BattleLine.tres" id="3_sb1d1"]
 [ext_resource type="Resource" uid="uid://dwgispuxikww4" path="res://ColorSettings/DedicatedTransport.tres" id="4_g34wl"]
@@ -13,7 +12,6 @@
 custom_minimum_size = Vector2(200, 60)
 offset_right = 504.0
 offset_bottom = 60.0
-theme = ExtResource("1_hsxul")
 theme_override_constants/margin_left = 2
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2

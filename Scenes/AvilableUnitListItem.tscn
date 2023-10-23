@@ -1,6 +1,5 @@
-[gd_scene load_steps=9 format=3 uid="uid://b6rsacjxn7nl2"]
+[gd_scene load_steps=8 format=3 uid="uid://b6rsacjxn7nl2"]
 
-[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_2argp"]
 [ext_resource type="Script" path="res://src/View/AvilableUnitListItem.cs" id="1_733j8"]
 [ext_resource type="Resource" uid="uid://b18i002l5mfbt" path="res://ColorSettings/Character.tres" id="2_rmba8"]
 [ext_resource type="Resource" uid="uid://c1kqrqofova1o" path="res://ColorSettings/BattleLine.tres" id="3_k6agq"]
@@ -13,7 +12,6 @@
 custom_minimum_size = Vector2(200, 60)
 offset_right = 504.0
 offset_bottom = 60.0
-theme = ExtResource("1_2argp")
 theme_override_constants/margin_left = 2
 theme_override_constants/margin_top = 2
 theme_override_constants/margin_right = 2

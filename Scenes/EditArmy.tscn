@@ -1,19 +1,28 @@
-[gd_scene load_steps=12 format=3 uid="uid://d2p6hkq05kg87"]
+[gd_scene load_steps=14 format=3 uid="uid://d2p6hkq05kg87"]
 
 [ext_resource type="Script" path="res://src/EditArmyView.cs" id="1_ejasg"]
 [ext_resource type="PackedScene" uid="uid://b6rsacjxn7nl2" path="res://Scenes/AvilableUnitListItem.tscn" id="1_oryx4"]
 [ext_resource type="Script" path="res://src/View/AvailableUnitList.cs" id="1_pb30e"]
-[ext_resource type="Theme" uid="uid://bi54ign8ggomc" path="res://Themes/Classic95/Classic95.tres" id="1_s64wl"]
 [ext_resource type="Script" path="res://src/View/SelectedUnitList.cs" id="3_n3kc6"]
 [ext_resource type="PackedScene" uid="uid://bqpqtdk27nkrj" path="res://Scenes/SelectedUnitListItem.tscn" id="4_3bg0h"]
 [ext_resource type="Script" path="res://src/SelectedArmyController.cs" id="6_hkpeb"]
 [ext_resource type="Script" path="res://src/UnitInventoryController.cs" id="7_brtbn"]
 [ext_resource type="Script" path="res://src/UI/FileMenuController.cs" id="10_8qvnk"]
+[ext_resource type="Script" path="res://src/UI/Notifications/CopiedNotification.cs" id="10_hgq5b"]
 [ext_resource type="PackedScene" uid="uid://cayexynb2gjhr" path="res://Scenes/FillOptionsWindow.tscn" id="10_p2j6k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ov52g"]
 font_size = 20
-font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2jhr"]
+bg_color = Color(0.121569, 0.678431, 0.168627, 0.698039)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="LabelSettings" id="LabelSettings_5d8xk"]
+font_size = 18
 
 [node name="EditArmy" type="Control" node_paths=PackedStringArray("mainViewContainer")]
 layout_mode = 3
@@ -22,7 +31,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme = ExtResource("1_s64wl")
 script = ExtResource("1_ejasg")
 mainViewContainer = NodePath("Panel/MarginContainer/HSplitContainer")
 
@@ -275,13 +283,12 @@ theme_override_constants/margin_bottom = 2
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel_2/MarginContainer"]
 layout_mode = 2
 
-[node name="FileButton" type="MenuButton" parent="Panel_2/MarginContainer/HBoxContainer"]
+[node name="FileButton" type="MenuButton" parent="Panel_2/MarginContainer/HBoxContainer" node_paths=PackedStringArray("copiedNotificationToast", "selectedArmyController")]
 custom_minimum_size = Vector2(75, 0)
 layout_mode = 2
-disabled = true
 text = "File"
 flat = false
-item_count = 4
+item_count = 3
 popup/item_0/text = "Change List"
 popup/item_0/id = 0
 popup/item_1/text = ""
@@ -289,6 +296,45 @@ popup/item_1/id = 1
 popup/item_1/separator = true
 popup/item_2/text = "Export to Clipboard"
 popup/item_2/id = 2
-popup/item_3/text = "Export to Text File"
-popup/item_3/id = 3
 script = ExtResource("10_8qvnk")
+copiedNotificationToast = NodePath("../../../../CopiedNotification")
+selectedArmyController = NodePath("../../../../SelectedArmyController")
+
+[node name="CopiedNotification" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -262.0
+offset_top = 19.0
+offset_right = 262.0
+offset_bottom = 56.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2jhr")
+script = ExtResource("10_hgq5b")
+deltaYOffset = 75.0
+tweenTime = 0.2
+hideTime = 2.0
+
+[node name="MarginContainer" type="MarginContainer" parent="CopiedNotification"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 4
+theme_override_constants/margin_top = 4
+theme_override_constants/margin_right = 4
+theme_override_constants/margin_bottom = 4
+
+[node name="Label" type="Label" parent="CopiedNotification/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 1
+text = "Army Copied to Clipboard!"
+label_settings = SubResource("LabelSettings_5d8xk")
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Text;
 using ArmyGenerator.ArmyData;
 using ArmyGenerator.GlobalStore;
 using ArmyGenerator.Model;
@@ -49,7 +50,7 @@ public partial class SelectedArmyController : Node
     private void HandleUnitListChange(UnitData unitData, string unitReferenceId, int oldIndex, int newIndex)
     {
         selectedArmy.UpdateItem(unitData, unitReferenceId, oldIndex, newIndex);
-        
+
         OnPointsChange?.Invoke(selectedArmy.GetPoints());
         pointsDisplay.Value = selectedArmy.GetPoints();
     }
@@ -144,5 +145,15 @@ public partial class SelectedArmyController : Node
 
         OnPointsChange?.Invoke(selectedArmy.GetPoints());
         pointsDisplay.Value = selectedArmy.GetPoints();
+    }
+
+    public string GetArmyAsString()
+    {
+        int totalPoints = selectedArmy.GetPoints();
+        int maxPoints = (int) desiredArmyPoints.Value;
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.AppendLine($"Points: {totalPoints} / {maxPoints}");
+        stringBuilder.Append(selectedArmy.GetArmyAsString());
+        return stringBuilder.ToString();
     }
 }

@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 using ArmyGenerator.ArmyData;
 using Godot;
 
@@ -10,6 +12,11 @@ public class SelectArmyUnitModel
     public int modelCount;
     public int pointCount;
     public UnitData sourceUnitData;
+
+    public override string ToString()
+    {
+        return $"  - [{modelCount}] {sourceUnitData.name} - {pointCount}pts";
+    }
 }
 
 public class SelectedArmyModel
@@ -49,6 +56,7 @@ public class SelectedArmyModel
             newModel.unitReferenceId = GenerateReferenceId(matchingUnits, unitData.unitId);
             newModel.modelCount = unitData.FindMinimumKey().models;
             newModel.pointCount = unitData.FindMinimumKey().points;
+            newModel.sourceUnitData = unitData;
 
             pointCount += newModel.pointCount;
 
@@ -63,6 +71,7 @@ public class SelectedArmyModel
             newModel.unitReferenceId = GenerateReferenceId(newList, unitData.unitId);
             newModel.modelCount = unitData.FindMinimumKey().models;
             newModel.pointCount = unitData.FindMinimumKey().points;
+            newModel.sourceUnitData = unitData;
 
             pointCount += newModel.pointCount;
 
@@ -139,6 +148,114 @@ public class SelectedArmyModel
             {
                 GD.PrintErr("Tried to unit a unit that is not found: " + unitReferenceId);
             }
+        }
+    }
+
+    public string GetArmyAsString()
+    {
+        StringBuilder stringBuilder = new StringBuilder();
+
+        List<SelectArmyUnitModel> characters = new List<SelectArmyUnitModel>();
+        List<SelectArmyUnitModel> battleLine = new List<SelectArmyUnitModel>();
+        List<SelectArmyUnitModel> transports = new List<SelectArmyUnitModel>();
+        List<SelectArmyUnitModel> fortifications = new List<SelectArmyUnitModel>();
+        List<SelectArmyUnitModel> other = new List<SelectArmyUnitModel>();
+
+        foreach (List<SelectArmyUnitModel> units in mapOfSourceIdToUnit.Values)
+        {
+            foreach (SelectArmyUnitModel unit in units)
+            {
+                switch (unit.sourceUnitData.type)
+                {
+                    case "Character":
+                    case "Epic Character":
+                        characters.Add(unit);
+                        break;
+                    case "Battleline":
+                        battleLine.Add(unit);
+                        break;
+                    case "Dedicated Transport":
+                        transports.Add(unit);
+                        break;
+                    case "Fortification":
+                        fortifications.Add(unit);
+                        break;
+                    case "Other":
+                        other.Add(unit);
+                        break;
+                }
+            }
+        }
+
+        if (characters.Count > 0)
+        {
+            stringBuilder.AppendLine("# Characters");
+            characters.Sort(new SelectedUnitComparer());
+            foreach (SelectArmyUnitModel unit in characters)
+            {
+                stringBuilder.AppendLine(unit.ToString());
+            }
+        }
+
+        if (battleLine.Count > 0)
+        {
+            stringBuilder.AppendLine("# Battleline");
+            battleLine.Sort(new SelectedUnitComparer());
+            foreach (SelectArmyUnitModel unit in battleLine)
+            {
+                stringBuilder.AppendLine(unit.ToString());
+            }
+        }
+
+
+        if (transports.Count > 0)
+        {
+            stringBuilder.AppendLine("# Dedicated Transports");
+            transports.Sort(new SelectedUnitComparer());
+            foreach (SelectArmyUnitModel unit in transports)
+            {
+                stringBuilder.AppendLine(unit.ToString());
+            }
+        }
+
+
+        if (fortifications.Count > 0)
+        {
+            stringBuilder.AppendLine("# Fortifications");
+            fortifications.Sort(new SelectedUnitComparer());
+            foreach (SelectArmyUnitModel unit in fortifications)
+            {
+                stringBuilder.AppendLine(unit.ToString());
+            }
+        }
+
+
+        if (other.Count > 0)
+        {
+            stringBuilder.AppendLine("# Other");
+            other.Sort(new SelectedUnitComparer());
+            foreach (SelectArmyUnitModel unit in other)
+            {
+                stringBuilder.AppendLine(unit.ToString());
+            }
+        }
+
+
+        return stringBuilder.ToString();
+    }
+
+    class SelectedUnitComparer : IComparer<SelectArmyUnitModel>
+    {
+        public int Compare(SelectArmyUnitModel x, SelectArmyUnitModel y)
+        {
+            if (x == null && y == null) return 0;
+            if (y == null) return 1;
+            if (x == null) return -1;
+
+            int xIndex = Int32.Parse(x.sourceUnitData.unitId.Split("_")[1]);
+            int yIndex = Int32.Parse(y.sourceUnitData.unitId.Split("_")[1]);
+
+            return xIndex - yIndex;
         }
     }
 }

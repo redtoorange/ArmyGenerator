@@ -1,3 +1,4 @@
+using ArmyGenerator;
 using Godot;
 
 public partial class FileMenuController : MenuButton
@@ -5,6 +6,9 @@ public partial class FileMenuController : MenuButton
     private static readonly int CHANGE_LIST_ID = 0;
     private static readonly int EXPORT_TO_CLIP_BOARD_ID = 2;
     private static readonly int EXPORT_TO_TEXT_ID = 3;
+
+    [Export] private CopiedNotification copiedNotificationToast;
+    [Export] private SelectedArmyController selectedArmyController;
 
     public override void _Ready()
     {
@@ -19,6 +23,8 @@ public partial class FileMenuController : MenuButton
         }
         else if (id == EXPORT_TO_CLIP_BOARD_ID)
         {
+            copiedNotificationToast.Show();
+            DisplayServer.ClipboardSet(selectedArmyController.GetArmyAsString());
         }
         else if (id == EXPORT_TO_TEXT_ID)
         {
