@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://ct1s40gq126i7"]
+
+[ext_resource type="Script" path="res://src/UI/ChangeArmyWindow.cs" id="1_nk52h"]
+[ext_resource type="PackedScene" uid="uid://c0pwu4sorxld7" path="res://Scenes/ChangeArmyWindowUi.tscn" id="1_pxc8r"]
+
+[node name="ChangeArmyWindow" type="Window" node_paths=PackedStringArray("armyOptions", "submitButton")]
+title = "Change Army"
+position = Vector2i(322, 150)
+size = Vector2i(425, 200)
+exclusive = true
+transparent = true
+popup_window = true
+script = ExtResource("1_nk52h")
+armyOptions = NodePath("ChangeArmyWindowUI/MarginContainer/VBoxContainer/OptionButton")
+submitButton = NodePath("ChangeArmyWindowUI/MarginContainer/VBoxContainer/MarginContainer/Button")
+
+[node name="ChangeArmyWindowUI" parent="." instance=ExtResource("1_pxc8r")]
+
+[editable path="ChangeArmyWindowUI"]

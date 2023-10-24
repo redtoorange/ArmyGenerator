@@ -156,4 +156,10 @@ public partial class SelectedArmyController : Node
         stringBuilder.Append(selectedArmy.GetArmyAsString());
         return stringBuilder.ToString();
     }
+
+    public void ChangeArmy(int armyOptionsSelected)
+    {
+        armyListData = DataFileLoader.S.GetArmyList(armyOptionsSelected);
+        availableUnitList.ResetList(armyListData);
+    }
 }

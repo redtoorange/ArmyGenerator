@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using Godot;
 using Godot.Collections;
+using Array = Godot.Collections.Array;
 
 namespace ArmyGenerator.ArmyData;
 
@@ -136,6 +138,11 @@ public partial class DataFileLoader : Node
         selectedArmy = armyOptionsSelected;
     }
 
+    public ArmyListData GetArmyList(int index)
+    {
+        return loadedArmyListData[index];
+    }
+    
     public ArmyListData GetSelectedArmyList()
     {
         return loadedArmyListData[selectedArmy];

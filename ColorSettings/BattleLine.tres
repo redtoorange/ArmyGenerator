@@ -5,4 +5,4 @@
 [resource]
 script = ExtResource("1_6jvpv")
 type = "BattleLine"
-color = Color(0.054902, 0, 0.658824, 1)
+color = Color(0.0823529, 0, 1, 1)

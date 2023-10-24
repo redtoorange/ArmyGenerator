@@ -1,7 +1,7 @@
 {
   "Tyranids": [
     {
-      "UnitId": "TYRA_1",
+      "UnitId": "TYRA_01",
       "Name": "Broodlord",
       "Type": "Character",
       "Size": "1",
@@ -9,7 +9,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TYRA_2",
+      "UnitId": "TYRA_02",
       "Name": "Deathleaper",
       "Type": "Epic Character",
       "Size": "1",
@@ -17,7 +17,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "TYRA_3",
+      "UnitId": "TYRA_03",
       "Name": "Hive Tyrant",
       "Type": "Character",
       "Size": "1",
@@ -25,7 +25,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TYRA_4",
+      "UnitId": "TYRA_04",
       "Name": "Neurotyrant",
       "Type": "Character",
       "Size": "1",
@@ -33,7 +33,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TYRA_5",
+      "UnitId": "TYRA_05",
       "Name": "Old One Eye",
       "Type": "Epic Character",
       "Size": "1",
@@ -41,7 +41,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "TYRA_6",
+      "UnitId": "TYRA_06",
       "Name": "Parasite of Mortrex",
       "Type": "Character",
       "Size": "1",
@@ -49,7 +49,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TYRA_7",
+      "UnitId": "TYRA_07",
       "Name": "Tervigon",
       "Type": "Character",
       "Size": "1",
@@ -57,7 +57,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TYRA_8",
+      "UnitId": "TYRA_08",
       "Name": "The Swarmlord",
       "Type": "Epic Character",
       "Size": "1",
@@ -65,7 +65,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "TYRA_9",
+      "UnitId": "TYRA_09",
       "Name": "Winged Hive Tyrant",
       "Type": "Character",
       "Size": "1",
@@ -379,7 +379,7 @@
   ],
   "Tau": [
     {
-      "UnitId": "TAU_1",
+      "UnitId": "TAU_01",
       "Name": "Aun'shi",
       "Type": "Epic Character",
       "Size": "1",
@@ -387,7 +387,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "TAU_2",
+      "UnitId": "TAU_02",
       "Name": "Aun'va",
       "Type": "Epic Character",
       "Size": "3",
@@ -395,7 +395,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "TAU_3",
+      "UnitId": "TAU_03",
       "Name": "Cadre Fireblade",
       "Type": "Character",
       "Size": "1",
@@ -403,7 +403,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TAU_4",
+      "UnitId": "TAU_04",
       "Name": "Commander Farsight",
       "Type": "Epic Character",
       "Size": "1",
@@ -411,7 +411,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "TAU_5",
+      "UnitId": "TAU_05",
       "Name": "Commander In Coldstar Battlesuit",
       "Type": "Character",
       "Size": "1",
@@ -419,7 +419,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TAU_6",
+      "UnitId": "TAU_06",
       "Name": "Commander In Crisi Battlesuit",
       "Type": "Character",
       "Size": "1",
@@ -427,7 +427,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TAU_7",
+      "UnitId": "TAU_07",
       "Name": "Commander In Enforcer Battlesuit",
       "Type": "Character",
       "Size": "1",
@@ -435,7 +435,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "TAU_8",
+      "UnitId": "TAU_08",
       "Name": "Commander Shadowsun",
       "Type": "Epic Character",
       "Size": "1",
@@ -443,7 +443,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "TAU_9",
+      "UnitId": "TAU_09",
       "Name": "Darkstrider",
       "Type": "Epic Character",
       "Size": "1",
@@ -677,7 +677,7 @@
   ],
   "Orks": [
     {
-      "UnitId": "ORK_1",
+      "UnitId": "ORK_01",
       "Name": "Beastboss",
       "Type": "Character",
       "Size": "1",
@@ -685,7 +685,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "ORK_2",
+      "UnitId": "ORK_02",
       "Name": "Beastboss On Squigosaur",
       "Type": "Character",
       "Size": "1",
@@ -693,7 +693,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "ORK_3",
+      "UnitId": "ORK_03",
       "Name": "Big Mek In Mega Armour",
       "Type": "Character",
       "Size": "1",
@@ -701,7 +701,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "ORK_4",
+      "UnitId": "ORK_04",
       "Name": "Big Mek With Kustom Force Field",
       "Type": "Character",
       "Size": "1",
@@ -709,7 +709,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "ORK_5",
+      "UnitId": "ORK_05",
       "Name": "Big Mek With Shokk Attack Gun",
       "Type": "Character",
       "Size": "1",
@@ -717,7 +717,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "ORK_6",
+      "UnitId": "ORK_06",
       "Name": "Boss Snikrot",
       "Type": "Epic Character",
       "Size": "1",
@@ -725,7 +725,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "ORK_7",
+      "UnitId": "ORK_07",
       "Name": "Boss Zagstruk",
       "Type": "Epic Character",
       "Size": "1",
@@ -733,7 +733,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "ORK_8",
+      "UnitId": "ORK_08",
       "Name": "Deffkilla Wartrike",
       "Type": "Character",
       "Size": "1",
@@ -741,7 +741,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "ORK_9",
+      "UnitId": "ORK_09",
       "Name": "Ghazghkull Thraka",
       "Type": "Epic Character",
       "Size": "2",
@@ -1135,7 +1135,7 @@
   ],
   "Imperial Knights": [
     {
-      "UnitId": "IK_1",
+      "UnitId": "IK_01",
       "Name": "Canis Rex",
       "Type": "Character",
       "Size": "1",
@@ -1143,7 +1143,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "IK_2",
+      "UnitId": "IK_02",
       "Name": "Knight Castellan",
       "Type": "Character",
       "Size": "1",
@@ -1151,7 +1151,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "IK_3",
+      "UnitId": "IK_03",
       "Name": "Knight Crusader",
       "Type": "Character",
       "Size": "1",
@@ -1159,7 +1159,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "IK_4",
+      "UnitId": "IK_04",
       "Name": "Knight Errant",
       "Type": "Character",
       "Size": "1",
@@ -1167,7 +1167,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "IK_5",
+      "UnitId": "IK_05",
       "Name": "Knight Gallant",
       "Type": "Character",
       "Size": "1",
@@ -1175,7 +1175,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "IK_6",
+      "UnitId": "IK_06",
       "Name": "Knight Paladin",
       "Type": "Character",
       "Size": "1",
@@ -1183,7 +1183,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "IK_7",
+      "UnitId": "IK_07",
       "Name": "Knight Preceptor",
       "Type": "Character",
       "Size": "1",
@@ -1191,7 +1191,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "IK_8",
+      "UnitId": "IK_08",
       "Name": "Knight Valiant",
       "Type": "Character",
       "Size": "1",
@@ -1199,7 +1199,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "IK_9",
+      "UnitId": "IK_09",
       "Name": "Knight Warden",
       "Type": "Character",
       "Size": "1",
@@ -1225,7 +1225,7 @@
   ],
   "Astra Militarum": [
     {
-      "UnitId": "AM_1",
+      "UnitId": "AM_01",
       "Name": "‘Iron Hand’ Straken",
       "Type": "Epic Character",
       "Size": "1",
@@ -1233,7 +1233,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "AM_2",
+      "UnitId": "AM_02",
       "Name": "Cadian Castellan",
       "Type": "Character",
       "Size": "1",
@@ -1241,7 +1241,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "AM_3",
+      "UnitId": "AM_03",
       "Name": "Cadian Command Squad",
       "Type": "Character",
       "Size": "5",
@@ -1249,7 +1249,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "AM_4",
+      "UnitId": "AM_04",
       "Name": "Commissar",
       "Type": "Character",
       "Size": "1",
@@ -1257,7 +1257,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "AM_5",
+      "UnitId": "AM_05",
       "Name": "Gaunt’s Ghosts",
       "Type": "Epic Character",
       "Size": "6",
@@ -1265,7 +1265,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "AM_6",
+      "UnitId": "AM_06",
       "Name": "Lord Solar Leontus",
       "Type": "Epic Character",
       "Size": "1",
@@ -1273,7 +1273,7 @@
       "Max": "1"
     },
     {
-      "UnitId": "AM_7",
+      "UnitId": "AM_07",
       "Name": "Militarum Tempestus Command Squad",
       "Type": "Character",
       "Size": "5",
@@ -1281,7 +1281,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "AM_8",
+      "UnitId": "AM_08",
       "Name": "Platoon Command Squad",
       "Type": "Character",
       "Size": "5",
@@ -1289,7 +1289,7 @@
       "Max": "3"
     },
     {
-      "UnitId": "AM_9",
+      "UnitId": "AM_09",
       "Name": "Primaris Psyker",
       "Type": "Character",
       "Size": "1",
@@ -1702,6 +1702,402 @@
       "Type": "Other",
       "Size": "1",
       "Points": "110",
+      "Max": "3"
+    }
+  ],
+  "Agents of the Imperium": [
+    {
+      "UnitId": "AOI_01",
+      "Name": "Callidus Assassin",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "90",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_02",
+      "Name": "Culexus Assassin",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "85",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_03",
+      "Name": "Eversor Assassin",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "75",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_04",
+      "Name": "Inquisitor",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "55",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AOI_05",
+      "Name": "Inquisitor Coteaz",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "75",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_06",
+      "Name": "Inquisitor Eisenhorn",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "65",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_07",
+      "Name": "Inquisitor Greyfax",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "65",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_08",
+      "Name": "Inquisitor Karamazov",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "130",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_09",
+      "Name": "Lord Inquisitor Kyria Draxus",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "75",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_10",
+      "Name": "Rogue Trader Entourage",
+      "Type": "Epic Character",
+      "Size": "4",
+      "Points": "105",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AOI_11",
+      "Name": "Vindicare Assassin",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "80",
+      "Max": "1"
+    },
+    {
+      "UnitId": "AOI_12",
+      "Name": "Vigilant Squad",
+      "Type": "Battleline",
+      "Size": "10",
+      "Points": "105",
+      "Max": "6"
+    },
+    {
+      "UnitId": "AOI_13",
+      "Name": "Voidsmen-at-arms",
+      "Type": "Battleline",
+      "Size": "5,10",
+      "Points": "50,100",
+      "Max": "6"
+    },
+    {
+      "UnitId": "AOI_14",
+      "Name": "Exaction Squad",
+      "Type": "Other",
+      "Size": "10",
+      "Points": "110",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AOI_15",
+      "Name": "Imperial Navy Breachers",
+      "Type": "Other",
+      "Size": "10",
+      "Points": "105",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AOI_16",
+      "Name": "Inquisitorial Henchmen",
+      "Type": "Other",
+      "Size": "4,6,10,12",
+      "Points": "40,60,100,140",
+      "Max": "3"
+    },
+    {
+      "UnitId": "AOI_17",
+      "Name": "Subductor Squad",
+      "Type": "Other",
+      "Size": "10",
+      "Points": "110",
+      "Max": "3"
+    }
+  ],
+  " Adepta Sororitas": [
+    {
+      "UnitId": "SIS_01",
+      "Name": "Aestred Thurga And Agathae Dolan",
+      "Type": "Epic Character",
+      "Size": "2",
+      "Points": "55",
+      "Max": "1"
+    },
+    {
+      "UnitId": "SIS_02",
+      "Name": "Canoness",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "50",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_03",
+      "Name": "Daemonifuge",
+      "Type": "Epic Character",
+      "Size": "2",
+      "Points": "80",
+      "Max": "1"
+    },
+    {
+      "UnitId": "SIS_04",
+      "Name": "Dialogus",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "30",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_05",
+      "Name": "Dogmata",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "40",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_06",
+      "Name": "Hospitaller",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "35",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_07",
+      "Name": "Imagifier",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "35",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_08",
+      "Name": "Junith Eruita",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "90",
+      "Max": "1"
+    },
+    {
+      "UnitId": "SIS_09",
+      "Name": "Missionary",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "30",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_10",
+      "Name": "Morvenn Vahl",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "125",
+      "Max": "1"
+    },
+    {
+      "UnitId": "SIS_11",
+      "Name": "Palatine",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "50",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_12",
+      "Name": "Preacher",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "40",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_13",
+      "Name": "Saint Celestine",
+      "Type": "Epic Character",
+      "Size": "3",
+      "Points": "135",
+      "Max": "1"
+    },
+    {
+      "UnitId": "SIS_14",
+      "Name": "Triumph Of Saint Katherine",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "125",
+      "Max": "1"
+    },
+    {
+      "UnitId": "SIS_15",
+      "Name": "Battle Sisters Squad",
+      "Type": "Battleline",
+      "Size": "10",
+      "Points": "100",
+      "Max": "6"
+    },
+    {
+      "UnitId": "SIS_16",
+      "Name": "Immolator",
+      "Type": "Dedicated Transport",
+      "Size": "1",
+      "Points": "115",
+      "Max": "6"
+    },
+    {
+      "UnitId": "SIS_17",
+      "Name": "Sororitas Rhino",
+      "Type": "Dedicated Transport",
+      "Size": "1",
+      "Points": "75",
+      "Max": "6"
+    },
+    {
+      "UnitId": "SIS_18",
+      "Name": "Arco-flagellants",
+      "Type": "Other",
+      "Size": "3,10",
+      "Points": "40,130",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_19",
+      "Name": "Castigator",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "140",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_20",
+      "Name": "Celestian Sacresants",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "65,130",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_21",
+      "Name": "Crusaders",
+      "Type": "Other",
+      "Size": "2,4,6",
+      "Points": "25,50,75",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_22",
+      "Name": "Death Cult Assassins",
+      "Type": "Other",
+      "Size": "2,4,6",
+      "Points": "35,70,105",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_23",
+      "Name": "Dominion Squad",
+      "Type": "Other",
+      "Size": "10",
+      "Points": "120",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_24",
+      "Name": "Exorcist",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_25",
+      "Name": "Mortifiers",
+      "Type": "Other",
+      "Size": "1-2",
+      "Points": "60",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_26",
+      "Name": "Paragon Warsuits",
+      "Type": "Other",
+      "Size": "3",
+      "Points": "200",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_27",
+      "Name": "Penitent Engines",
+      "Type": "Other",
+      "Size": "1-2",
+      "Points": "60",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_28",
+      "Name": "Repentia Squad",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "65,130",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_29",
+      "Name": "Retributor Squad",
+      "Type": "Other",
+      "Size": "5",
+      "Points": "115",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_30",
+      "Name": "Seraphim Squad",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "70,140",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_31",
+      "Name": "Sisters Novitiate Squad",
+      "Type": "Other",
+      "Size": "10",
+      "Points": "85",
+      "Max": "3"
+    },
+    {
+      "UnitId": "SIS_32",
+      "Name": "Zephyrim Squad",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "70,140",
       "Max": "3"
     }
   ]

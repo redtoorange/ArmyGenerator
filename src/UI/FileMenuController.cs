@@ -9,6 +9,7 @@ public partial class FileMenuController : MenuButton
 
     [Export] private CopiedNotification copiedNotificationToast;
     [Export] private SelectedArmyController selectedArmyController;
+    [Export] private ChangeArmyWindow changeArmyWindow;
 
     public override void _Ready()
     {
@@ -19,7 +20,7 @@ public partial class FileMenuController : MenuButton
     {
         if (id == CHANGE_LIST_ID)
         {
-            GD.Print("Changing List!");
+            changeArmyWindow.Show();
         }
         else if (id == EXPORT_TO_CLIP_BOARD_ID)
         {
