@@ -5,7 +5,16 @@ using Godot.Collections;
 public partial class FillOptionWindow : Window
 {
     [Export] private Button openOptionsButton;
-    [Export] private Array<CheckBox> fillOptions; 
+    [Export] private Array<CheckBox> fillOptions;
+
+    [ExportGroup("Imperial Agents")]
+    [Export] private CheckBox imperialAgentsCheckBox;
+    
+    [Export] private Control imperialAgentsCharacterHolder;
+    [Export] private Control imperialAgentsRetinueHolder;
+    
+    [Export] private SpinBox imperialAgentsCharacterCount;
+    [Export] private SpinBox imperialAgentsRetinueCount;
 
     public override void _Ready()
     {
@@ -15,6 +24,39 @@ public partial class FillOptionWindow : Window
         foreach (CheckBox checkBox in fillOptions)
         {
             checkBox.Toggled += (bool toggledOn) => HandleButtonToggled(checkBox, toggledOn);
+        }
+        
+        imperialAgentsCheckBox.Toggled  += HandleImperialAgentsCheckBox;
+        imperialAgentsCharacterCount.ValueChanged += HandleImperialCharacterAgentCountChange;
+        imperialAgentsRetinueCount.ValueChanged += HandleImperialRetinueAgentCountChange;
+        
+        GlobalDataStore.S.GetFillOptions().ImperialAgentCharacterCount = (int) imperialAgentsCharacterCount.Value;
+        GlobalDataStore.S.GetFillOptions().ImperialAgentRetinueCount = (int) imperialAgentsRetinueCount.Value;
+    }
+
+    private void HandleImperialCharacterAgentCountChange(double value)
+    {
+        GlobalDataStore.S.GetFillOptions().ImperialAgentCharacterCount = (int) value;
+    }
+    
+    private void HandleImperialRetinueAgentCountChange(double value)
+    {
+        GlobalDataStore.S.GetFillOptions().ImperialAgentRetinueCount = (int) value;
+    }
+
+    private void HandleImperialAgentsCheckBox(bool toggledOn)
+    {
+        if (toggledOn)
+        {
+            GlobalDataStore.S.GetFillOptions().IncludeImperialAgents = true;
+            imperialAgentsCharacterHolder.Show();
+            imperialAgentsRetinueHolder.Show();
+        }
+        else
+        {
+            GlobalDataStore.S.GetFillOptions().IncludeImperialAgents = false;
+            imperialAgentsCharacterHolder.Hide();
+            imperialAgentsRetinueHolder.Hide();
         }
     }
 

@@ -16,6 +16,7 @@ public class ModelsToPointData
 
 public class UnitData
 {
+    public ArmyListData armyListData;
     public string unitId;
     public string name;
     public string type;
@@ -23,8 +24,9 @@ public class UnitData
 
     public List<ModelsToPointData> modelCountToPriceMap;
 
-    public UnitData(string unitId, string name, string type, int maxCount)
+    public UnitData(ArmyListData armyListData, string unitId, string name, string type, int maxCount)
     {
+        this.armyListData = armyListData;
         this.unitId = unitId;
         this.name = name;
         this.type = type;

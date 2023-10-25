@@ -1,14 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://cayexynb2gjhr"]
+[gd_scene load_steps=3 format=3 uid="uid://cayexynb2gjhr"]
 
 [ext_resource type="Script" path="res://src/UI/FillOptionWindow.cs" id="1_g5pav"]
 
-[node name="FillOptionsWindow" type="Window" node_paths=PackedStringArray("fillOptions")]
+[sub_resource type="LabelSettings" id="LabelSettings_ve6da"]
+font_size = 14
+
+[node name="FillOptionsWindow" type="Window" node_paths=PackedStringArray("fillOptions", "imperialAgentsCheckBox", "imperialAgentsCharacterHolder", "imperialAgentsRetinueHolder", "imperialAgentsCharacterCount", "imperialAgentsRetinueCount")]
 title = "Fill Options"
 position = Vector2i(322, 150)
 size = Vector2i(600, 400)
 transparent = true
 script = ExtResource("1_g5pav")
 fillOptions = [NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_CHARACTERS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_EPIC_CHARACTERS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_TRANSPORTS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/NO_BATTLELINE"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/NO_FORTIFICATIONS")]
+imperialAgentsCheckBox = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/IMPERIAL_AGENTS")
+imperialAgentsCharacterHolder = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder")
+imperialAgentsRetinueHolder = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder_2")
+imperialAgentsCharacterCount = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder/AgentCharacterCount")
+imperialAgentsRetinueCount = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder_2/AgentRetinueCount")
 
 [node name="Panel" type="Panel" parent="."]
 anchors_preset = 15
@@ -49,6 +57,9 @@ text = "No Epic Characters"
 layout_mode = 2
 text = "No Transports"
 
+[node name="VSeparator" type="VSeparator" parent="Panel/MarginContainer/HBoxContainer"]
+layout_mode = 2
+
 [node name="VBoxContainer_2" type="VBoxContainer" parent="Panel/MarginContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -61,8 +72,49 @@ text = "No Battleline"
 layout_mode = 2
 text = "No Fortifcations"
 
-[node name="CheckBox_2" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]
+[node name="IMPERIAL_AGENTS" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]
+layout_mode = 2
+tooltip_text = "Include the Imperial Agents faction when generating this army."
+text = "Include Imperial Agents"
+
+[node name="AgentCountHolder" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]
 visible = false
 layout_mode = 2
-disabled = true
-text = "Small Units Only"
+alignment = 2
+
+[node name="AgentCountLabel" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder"]
+layout_mode = 2
+text = "Characters per 1,000 pts"
+label_settings = SubResource("LabelSettings_ve6da")
+
+[node name="AgentCharacterCount" type="SpinBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder"]
+layout_mode = 2
+max_value = 4.0
+value = 1.0
+rounded = true
+alignment = 1
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2
+
+[node name="AgentCountHolder_2" type="HBoxContainer" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]
+visible = false
+layout_mode = 2
+alignment = 2
+
+[node name="AgentCountLabel" type="Label" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder_2"]
+layout_mode = 2
+text = "Retinue per 1,000 pts"
+label_settings = SubResource("LabelSettings_ve6da")
+
+[node name="AgentRetinueCount" type="SpinBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder_2"]
+layout_mode = 2
+max_value = 4.0
+value = 1.0
+rounded = true
+alignment = 1
+
+[node name="Control" type="Control" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder_2"]
+custom_minimum_size = Vector2(15, 0)
+layout_mode = 2

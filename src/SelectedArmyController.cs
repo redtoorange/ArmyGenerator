@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using ArmyGenerator.ArmyData;
 using ArmyGenerator.GlobalStore;
+using ArmyGenerator.ImperialAgent;
 using ArmyGenerator.Model;
 using ArmyGenerator.View;
 using Godot;
@@ -25,6 +26,8 @@ public partial class SelectedArmyController : Node
 
     private SelectedArmyModel selectedArmy;
     private ArmyListData armyListData;
+    private ImperialAgentManager imperialAgentManager;
+
 
     public override void _Ready()
     {
@@ -79,6 +82,26 @@ public partial class SelectedArmyController : Node
             }
         }
 
+        // Allow Agents of the imperium 
+        imperialAgentManager = null;
+        if (fillOptions.IncludeImperialAgents)
+        {
+            imperialAgentManager = new ImperialAgentManager(
+                Mathf.CeilToInt((fillOptions.ImperialAgentCharacterCount * desiredPoints) / 1000.0f),
+                Mathf.CeilToInt((fillOptions.ImperialAgentRetinueCount * desiredPoints) / 1000.0f),
+                selectedArmy.GetAllUnits()
+            );
+
+            ArmyListData agentsData = DataFileLoader.S.GetArmyByName(ArmyNames.IMPERIAL_AGENTS);
+            foreach (UnitData value in agentsData.unitIdToDataMap.Values)
+            {
+                if (!fillOptions.IsBanned(value) && CanAddUnit(value))
+                {
+                    units.Add(value);
+                }
+            }
+        }
+
         while (units.Count > 0)
         {
             // Randomly Add a unit
@@ -100,6 +123,11 @@ public partial class SelectedArmyController : Node
 
     public bool CanAddUnit(UnitData unit)
     {
+        if (imperialAgentManager != null && !imperialAgentManager.IsAllowed(unit))
+        {
+            return false;
+        }
+
         // Will adding this unit go over the desired points?
         int desiredPoints = (int)desiredArmyPoints.Value;
         if (unit.FindMinimumKey().points + selectedArmy.GetPoints() > desiredPoints)
@@ -126,6 +154,10 @@ public partial class SelectedArmyController : Node
 
         // Add unit to the army
         selectedArmy.AddToArmy(unit, out string unitReferenceId);
+        if (imperialAgentManager != null)
+        {
+            imperialAgentManager.UnitAdded(unit);
+        }
 
         // Update the inventory (available)
 
@@ -150,7 +182,7 @@ public partial class SelectedArmyController : Node
     public string GetArmyAsString()
     {
         int totalPoints = selectedArmy.GetPoints();
-        int maxPoints = (int) desiredArmyPoints.Value;
+        int maxPoints = (int)desiredArmyPoints.Value;
         StringBuilder stringBuilder = new StringBuilder();
         stringBuilder.AppendLine($"Points: {totalPoints} / {maxPoints}");
         stringBuilder.Append(selectedArmy.GetArmyAsString());

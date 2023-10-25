@@ -9,20 +9,23 @@ public class ArmyFillOptions
     public bool NoTransports;
     public bool NoBattleLine;
     public bool NoFortifications;
+    public bool IncludeImperialAgents;
+    public int ImperialAgentCharacterCount;
+    public int ImperialAgentRetinueCount;
 
     public bool IsBanned(UnitData unitData)
     {
         switch (unitData.type)
         {
-            case "Character":
+            case UnitTypes.CHARACTER:
                 return NoCharacters;
-            case "Epic Character":
+            case UnitTypes.EPIC_CHARACTER:
                 return NoEpicCharacters;
-            case "Battleline":
+            case UnitTypes.BATTLELINE:
                 return NoBattleLine;
-            case "Dedicated Transport":
+            case UnitTypes.DEDICATED_TRANSPORT:
                 return NoTransports;
-            case "Fortification":
+            case UnitTypes.FORTIFICATION:
                 return NoFortifications;
         }
 

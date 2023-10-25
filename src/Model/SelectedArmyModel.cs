@@ -258,4 +258,18 @@ public class SelectedArmyModel
             return xIndex - yIndex;
         }
     }
+
+    public List<SelectArmyUnitModel> GetAllUnits()
+    {
+        List<SelectArmyUnitModel> list = new List<SelectArmyUnitModel>();
+        foreach (List<SelectArmyUnitModel> units in mapOfSourceIdToUnit.Values)
+        {
+            foreach (SelectArmyUnitModel unit in units)
+            {
+                list.Add(unit);
+            }
+        }
+
+        return list;
+    }
 }

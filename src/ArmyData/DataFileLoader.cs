@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Godot;
 using Godot.Collections;
-using Array = Godot.Collections.Array;
 
 namespace ArmyGenerator.ArmyData;
 
@@ -44,6 +42,7 @@ public partial class DataFileLoader : Node
             {
                 Dictionary unitEntry = unitIdVariant.AsGodotDictionary();
                 UnitData unitData = new UnitData(
+                    listData,
                     unitEntry["UnitId"].AsString(),
                     unitEntry["Name"].AsString(),
                     unitEntry["Type"].AsString(),
@@ -142,9 +141,22 @@ public partial class DataFileLoader : Node
     {
         return loadedArmyListData[index];
     }
-    
+
     public ArmyListData GetSelectedArmyList()
     {
         return loadedArmyListData[selectedArmy];
+    }
+
+    public ArmyListData GetArmyByName(string name)
+    {
+        for (int i = 0; i < loadedArmyListData.Count; i++)
+        {
+            if (loadedArmyListData[i].armyName.Equals(name))
+            {
+                return loadedArmyListData[i];
+            }
+        }
+
+        return null;
     }
 }
