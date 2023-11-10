@@ -2100,5 +2100,487 @@
       "Points": "70,140",
       "Max": "3"
     }
+  ],
+  "Aeldari": [
+    {
+      "UnitId": "ELD_01",
+      "Name": "Asurmen",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "135",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_02",
+      "Name": "Autarch",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "75",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_03",
+      "Name": "Autarch Skyrunner",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "90",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_04",
+      "Name": "Autarch Wayleaper",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "115",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_05",
+      "Name": "Avatar Of Khaine",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "335",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_06",
+      "Name": "Baharroth",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "125",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_07",
+      "Name": "Death Jester",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "90",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_08",
+      "Name": "Eldrad Ulthran",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "110",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_09",
+      "Name": "Farseer",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "80",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_10",
+      "Name": "Farseer Skyrunner",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "90",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_11",
+      "Name": "Fuegan",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "115",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_12",
+      "Name": "Illic Nightspear",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "70",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_13",
+      "Name": "Jain Zar",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "105",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_14",
+      "Name": "Karandras",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "100",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_15",
+      "Name": "Maugan Ra",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "130",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_16",
+      "Name": "Prince Yriel",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "100",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_17",
+      "Name": "Shadowseer",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "60",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_18",
+      "Name": "Solitaire",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "115",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_19",
+      "Name": "Spiritseer",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "65",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_20",
+      "Name": "The Visarch",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "90",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_21",
+      "Name": "The Yncarne",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "350",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_22",
+      "Name": "Troupe Master",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "55",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_23",
+      "Name": "Warlock",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "45",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_24",
+      "Name": "Warlock Skyrunner",
+      "Type": "Character",
+      "Size": "1",
+      "Points": "55",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_25",
+      "Name": "Yvraine",
+      "Type": "Epic Character",
+      "Size": "1",
+      "Points": "100",
+      "Max": "1"
+    },
+    {
+      "UnitId": "ELD_26",
+      "Name": "Corsair Voidreavers",
+      "Type": "Battleline",
+      "Size": "5,10",
+      "Points": "70,140",
+      "Max": "6"
+    },
+    {
+      "UnitId": "ELD_27",
+      "Name": "Guardian Defenders",
+      "Type": "Battleline",
+      "Size": "11",
+      "Points": "110",
+      "Max": "6"
+    },
+    {
+      "UnitId": "ELD_28",
+      "Name": "Storm Guardians",
+      "Type": "Battleline",
+      "Size": "11",
+      "Points": "115",
+      "Max": "6"
+    },
+    {
+      "UnitId": "ELD_29",
+      "Name": "Starweaver",
+      "Type": "Dedicated Transport",
+      "Size": "1",
+      "Points": "80",
+      "Max": "6"
+    },
+    {
+      "UnitId": "ELD_30",
+      "Name": "Wave Serpent",
+      "Type": "Dedicated Transport",
+      "Size": "1",
+      "Points": "120",
+      "Max": "6"
+    },
+    {
+      "UnitId": "ELD_31",
+      "Name": "Webway Gate",
+      "Type": "Fortification",
+      "Size": "1",
+      "Points": "220",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_32",
+      "Name": "Corsair Voidscarred",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "90,180",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_33",
+      "Name": "Crimson Hunter",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_34",
+      "Name": "Dark Reapers",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "80,160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_35",
+      "Name": "Dire Avengers",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "70,140",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_36",
+      "Name": "Falcon",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "140",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_37",
+      "Name": "Fire Dragons",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "85,170",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_38",
+      "Name": "Fire Prism",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "180",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_39",
+      "Name": "Hemlock Wraithfighter",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "155",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_40",
+      "Name": "Howling Banshees",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "85,170",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_41",
+      "Name": "Night Spinner",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "180",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_42",
+      "Name": "Rangers",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "55,110",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_43",
+      "Name": "Shining Spears",
+      "Type": "Other",
+      "Size": "3,6",
+      "Points": "120,240",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_44",
+      "Name": "Shroud Runners",
+      "Type": "Other",
+      "Size": "3,6",
+      "Points": "80,160",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_45",
+      "Name": "Skyweavers",
+      "Type": "Other",
+      "Size": "2,4",
+      "Points": "95,190",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_46",
+      "Name": "Striking Scorpions",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "75,150",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_47",
+      "Name": "Support Weapons",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "125",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_48",
+      "Name": "Swooping Hawks",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "75,150",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_49",
+      "Name": "Troupe",
+      "Type": "Other",
+      "Size": "5,6,11,12",
+      "Points": "75,90,165,180",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_50",
+      "Name": "Voidweaver",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "125",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_51",
+      "Name": "Vyper",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "85",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_52",
+      "Name": "War Walker",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "110",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_53",
+      "Name": "Warlock Conclave",
+      "Type": "Other",
+      "Size": "2,4",
+      "Points": "60,120",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_54",
+      "Name": "Warlock Skyrunner Conclave",
+      "Type": "Other",
+      "Size": "2,3",
+      "Points": "100,150",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_55",
+      "Name": "Warp Spiders",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "115,230",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_56",
+      "Name": "Windriders",
+      "Type": "Other",
+      "Size": "3,6,9",
+      "Points": "80,160,240",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_57",
+      "Name": "Wraithblades",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "170,340",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_58",
+      "Name": "Wraithguard",
+      "Type": "Other",
+      "Size": "5,10",
+      "Points": "170,340",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_59",
+      "Name": "Wraithknight",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "510",
+      "Max": "3"
+    },
+    {
+      "UnitId": "ELD_60",
+      "Name": "Wraithlord",
+      "Type": "Other",
+      "Size": "1",
+      "Points": "160",
+      "Max": "3"
+    }
   ]
 }

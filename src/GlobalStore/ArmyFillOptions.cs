@@ -4,12 +4,12 @@ namespace ArmyGenerator.GlobalStore;
 
 public class ArmyFillOptions
 {
-    public bool NoCharacters;
-    public bool NoEpicCharacters;
-    public bool NoTransports;
-    public bool NoBattleLine;
-    public bool NoFortifications;
-    public bool IncludeImperialAgents;
+    public bool NoCharacters = false;
+    public bool NoEpicCharacters = false;
+    public bool NoTransports = false;
+    public bool NoBattleLine = false;
+    public bool NoFortifications = true;
+    public bool IncludeImperialAgents = false;
     public int ImperialAgentCharacterCount;
     public int ImperialAgentRetinueCount;
 

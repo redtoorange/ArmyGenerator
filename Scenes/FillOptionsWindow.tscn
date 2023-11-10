@@ -70,6 +70,7 @@ text = "No Battleline"
 
 [node name="NO_FORTIFICATIONS" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]
 layout_mode = 2
+button_pressed = true
 text = "No Fortifcations"
 
 [node name="IMPERIAL_AGENTS" type="CheckBox" parent="Panel/MarginContainer/HBoxContainer/VBoxContainer_2"]

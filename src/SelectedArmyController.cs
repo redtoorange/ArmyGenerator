@@ -106,7 +106,10 @@ public partial class SelectedArmyController : Node
         {
             // Randomly Add a unit
             int index = GD.RandRange(0, units.Count - 1);
-            HandleAddNewUnitAddNewUnitToToSelected(units[index]);
+
+            UnitData unitToAdd = units[index];
+            
+            HandleAddNewUnitAddNewUnitToToSelected(unitToAdd);
 
             // Scrub the list of units that don't fit
             for (int i = units.Count - 1; i >= 0; i--)
