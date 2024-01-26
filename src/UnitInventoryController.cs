@@ -18,23 +18,23 @@ public partial class UnitInventoryController : Node
 
     public override void _EnterTree()
     {
-        GD.Print("Loading Data");
+        GD.Print("Loading Inventory Preferences");
         FileAccess loadFile = FileAccess.Open("res://InventoryPreferences.save", FileAccess.ModeFlags.Read);
         if (loadFile != null)
         {
             string fileData = loadFile.GetAsText();
             unitReferenceIdToInventory = GD.StrToVar(fileData).AsGodotDictionary<string, int>();
-            GD.Print("Successfully loaded data");
+            GD.Print("Successfully loaded Inventory Preferences");
         }
     }
 
     public override void _ExitTree()
     {
-        GD.Print("Saving Data");
+        GD.Print("Saving Inventory Preferences");
         FileAccess saveFile = FileAccess.Open("res://InventoryPreferences.save", FileAccess.ModeFlags.Write);
         string unitData = GD.VarToStr(unitReferenceIdToInventory);
         saveFile.StoreString(unitData);
-        GD.Print("Successfully saved data");
+        GD.Print("Successfully saved Inventory Preferences");
     }
 
     public bool HasInventoryValue(UnitData unitData)
@@ -54,7 +54,7 @@ public partial class UnitInventoryController : Node
             GD.Print($"Found Existing value for {unit.name} using {value} ");
             return value;
         }
-        
+
         GD.Print($"No value for {unit.name}, using {unit.maxCount}");
         SetInventory(unit, unit.maxCount);
 

@@ -6,7 +6,7 @@ public partial class CopiedNotification : Panel
     [Export] private float tweenTime = 1;
     [Export] private float hideTime = 5;
 
-    public void Show()
+    public void DisplayNotification()
     {
         Tween tween = CreateTween();
         tween.TweenProperty(this, "position", Position + new Vector2(0, -deltaYOffset), tweenTime)

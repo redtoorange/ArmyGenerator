@@ -1,12 +1,14 @@
-[gd_scene load_steps=15 format=3 uid="uid://d2p6hkq05kg87"]
+[gd_scene load_steps=17 format=3 uid="uid://d2p6hkq05kg87"]
 
 [ext_resource type="Script" path="res://src/EditArmyView.cs" id="1_ejasg"]
 [ext_resource type="PackedScene" uid="uid://b6rsacjxn7nl2" path="res://Scenes/AvilableUnitListItem.tscn" id="1_oryx4"]
 [ext_resource type="Script" path="res://src/View/AvailableUnitList.cs" id="1_pb30e"]
 [ext_resource type="Script" path="res://src/View/SelectedUnitList.cs" id="3_n3kc6"]
 [ext_resource type="PackedScene" uid="uid://bqpqtdk27nkrj" path="res://Scenes/SelectedUnitListItem.tscn" id="4_3bg0h"]
+[ext_resource type="Script" path="res://src/UnitVisibilityController.cs" id="4_m8aip"]
 [ext_resource type="PackedScene" uid="uid://ct1s40gq126i7" path="res://Scenes/ChangeArmyWindow.tscn" id="5_8p0ht"]
 [ext_resource type="Script" path="res://src/SelectedArmyController.cs" id="6_hkpeb"]
+[ext_resource type="Script" path="res://src/UI/ViewMenuController.cs" id="7_7of6n"]
 [ext_resource type="Script" path="res://src/UnitInventoryController.cs" id="7_brtbn"]
 [ext_resource type="Script" path="res://src/UI/FileMenuController.cs" id="10_8qvnk"]
 [ext_resource type="Script" path="res://src/UI/Notifications/CopiedNotification.cs" id="10_hgq5b"]
@@ -35,27 +37,39 @@ grow_vertical = 2
 script = ExtResource("1_ejasg")
 mainViewContainer = NodePath("MainPanel/MarginContainer/HSplitContainer")
 
-[node name="UnitInventoryController" type="Node" parent="."]
-script = ExtResource("7_brtbn")
-
-[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "unitInventoryController", "desiredArmyPoints", "pointsDisplay", "fillArmyButton", "clearArmyButton")]
+[node name="SelectedArmyController" type="Node" parent="." node_paths=PackedStringArray("availableUnitList", "selectedUnitList", "unitInventoryController", "unitVisibilityController", "desiredArmyPoints", "pointsDisplay", "fillArmyButton", "clearArmyButton")]
 script = ExtResource("6_hkpeb")
 availableUnitList = NodePath("../MainPanel/MarginContainer/HSplitContainer/VBoxContainer/AvailableUnitPanel/MarginContainer/ScrollContainer/MarginContainer/AvailableUnitList")
 selectedUnitList = NodePath("../MainPanel/MarginContainer/HSplitContainer/VBoxContainer_2/SelectedUnitPanel/MarginContainer/ScrollContainer/MarginContainer/SelectedUnitList")
-unitInventoryController = NodePath("../UnitInventoryController")
+unitInventoryController = NodePath("UnitInventoryController")
+unitVisibilityController = NodePath("UnitVisibilityController")
 desiredArmyPoints = NodePath("../MainPanel/MarginContainer/HSplitContainer/VBoxContainer_2/Panel/DesirePoints")
 pointsDisplay = NodePath("../MainPanel/MarginContainer/HSplitContainer/VBoxContainer_2/Panel/PointsDisplay")
 fillArmyButton = NodePath("../MainPanel/MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer/FillArmy")
 clearArmyButton = NodePath("../MainPanel/MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer/ClearArmy")
 
-[node name="FillOptionsWindow" parent="." node_paths=PackedStringArray("openOptionsButton") instance=ExtResource("10_p2j6k")]
+[node name="UnitVisibilityController" type="Node" parent="SelectedArmyController"]
+script = ExtResource("4_m8aip")
+
+[node name="UnitInventoryController" type="Node" parent="SelectedArmyController"]
+script = ExtResource("7_brtbn")
+
+[node name="FillOptionsWindow" parent="." node_paths=PackedStringArray("openOptionsButton", "fillOptions", "imperialAgentsCheckBox", "imperialAgentsCharacterHolder", "imperialAgentsRetinueHolder", "imperialAgentsCharacterCount", "imperialAgentsRetinueCount") instance=ExtResource("10_p2j6k")]
 visible = false
 openOptionsButton = NodePath("../MainPanel/MarginContainer/HSplitContainer/VBoxContainer_2/Panel_2/MarginContainer/HBoxContainer/Options")
+fillOptions = [NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_CHARACTERS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_EPIC_CHARACTERS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/NO_TRANSPORTS"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/NO_BATTLELINE"), NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/NO_FORTIFICATIONS")]
+imperialAgentsCheckBox = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/IMPERIAL_AGENTS")
+imperialAgentsCharacterHolder = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder")
+imperialAgentsRetinueHolder = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder_2")
+imperialAgentsCharacterCount = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder/AgentCharacterCount")
+imperialAgentsRetinueCount = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer_2/AgentCountHolder_2/AgentRetinueCount")
 
-[node name="ChangeArmyWindow" parent="." node_paths=PackedStringArray("selectedArmyController") instance=ExtResource("5_8p0ht")]
+[node name="ChangeArmyWindow" parent="." node_paths=PackedStringArray("selectedArmyController", "armyOptions", "submitButton") instance=ExtResource("5_8p0ht")]
 position = Vector2i(497, 255)
 visible = false
 selectedArmyController = NodePath("../SelectedArmyController")
+armyOptions = NodePath("ChangeArmyWindowUI/MarginContainer/VBoxContainer/OptionButton")
+submitButton = NodePath("ChangeArmyWindowUI/MarginContainer/VBoxContainer/MarginContainer/Button")
 
 [node name="FileMenu" type="Panel" parent="."]
 layout_mode = 1
@@ -90,12 +104,23 @@ popup/item_0/id = 0
 popup/item_1/text = ""
 popup/item_1/id = 1
 popup/item_1/separator = true
-popup/item_2/text = "Export to Clipboard"
+popup/item_2/text = "Copy to Clipboard"
 popup/item_2/id = 2
 script = ExtResource("10_8qvnk")
 copiedNotificationToast = NodePath("../../../../CopiedNotification")
 selectedArmyController = NodePath("../../../../SelectedArmyController")
 changeArmyWindow = NodePath("../../../../ChangeArmyWindow")
+
+[node name="ViewButton" type="MenuButton" parent="FileMenu/MarginContainer/HBoxContainer"]
+custom_minimum_size = Vector2(75, 0)
+layout_mode = 2
+text = "View"
+flat = false
+item_count = 1
+popup/item_0/text = "Show and Hide"
+popup/item_0/checkable = 1
+popup/item_0/id = 0
+script = ExtResource("7_7of6n")
 
 [node name="MainPanel" type="Panel" parent="."]
 layout_mode = 1

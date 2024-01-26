@@ -8,7 +8,7 @@
 [ext_resource type="Resource" uid="uid://clmadel56bk3k" path="res://ColorSettings/EpicCharacter.tres" id="6_kq416"]
 [ext_resource type="LabelSettings" uid="uid://dochhyffb2stm" path="res://Themes/UnitTypeLabelSettings.tres" id="8_joj87"]
 
-[node name="AvilableUnitListItem" type="MarginContainer" node_paths=PackedStringArray("modelName", "modelTypeLabel", "pointCountLabel", "inventorySpinner", "addButton")]
+[node name="AvilableUnitListItem" type="MarginContainer" node_paths=PackedStringArray("modelName", "modelTypeLabel", "pointCountLabel", "inventorySpinner", "addButton", "showButton", "hideButton")]
 custom_minimum_size = Vector2(200, 60)
 offset_right = 504.0
 offset_bottom = 60.0
@@ -23,6 +23,8 @@ modelTypeLabel = NodePath("Panel/MarginContainer/HBoxContainer/VBoxContainer/Uni
 pointCountLabel = NodePath("Panel/MarginContainer/HBoxContainer/PointCountLabel")
 inventorySpinner = NodePath("Panel/MarginContainer/HBoxContainer/InventorySpinner")
 addButton = NodePath("Panel/MarginContainer/HBoxContainer/AddUnitButton")
+showButton = NodePath("Panel/MarginContainer/HBoxContainer/ShowUnitButton")
+hideButton = NodePath("Panel/MarginContainer/HBoxContainer/HideUnitButton")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 2
@@ -81,6 +83,28 @@ How many of this units are availabe to use for the generator?"
 max_value = 6.0
 alignment = 1
 select_all_on_focus = true
+
+[node name="HideUnitButton" type="Button" parent="Panel/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+tooltip_text = "Add unit to army"
+focus_mode = 0
+theme_override_colors/font_color = Color(0.8125, 0.254772, 0.364659, 1)
+text = "Hide"
+
+[node name="ShowUnitButton" type="Button" parent="Panel/MarginContainer/HBoxContainer"]
+visible = false
+custom_minimum_size = Vector2(64, 32)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+tooltip_text = "Add unit to army"
+focus_mode = 0
+theme_override_colors/font_color = Color(0.0846119, 0.8125, 0.0346596, 1)
+text = "Show"
 
 [node name="AddUnitButton" type="Button" parent="Panel/MarginContainer/HBoxContainer"]
 custom_minimum_size = Vector2(32, 32)

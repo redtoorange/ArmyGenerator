@@ -24,7 +24,7 @@ public partial class FileMenuController : MenuButton
         }
         else if (id == EXPORT_TO_CLIP_BOARD_ID)
         {
-            copiedNotificationToast.Show();
+            copiedNotificationToast.DisplayNotification();
             DisplayServer.ClipboardSet(selectedArmyController.GetArmyAsString());
         }
         else if (id == EXPORT_TO_TEXT_ID)

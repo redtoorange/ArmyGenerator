@@ -17,6 +17,7 @@ public partial class SelectedArmyController : Node
     [Export] private AvailableUnitList availableUnitList;
     [Export] private SelectedUnitList selectedUnitList;
     [Export] private UnitInventoryController unitInventoryController;
+    [Export] private UnitVisibilityController unitVisibilityController;
 
     [Export] private SpinBox desiredArmyPoints;
     [Export] private SpinBox pointsDisplay;
@@ -34,7 +35,7 @@ public partial class SelectedArmyController : Node
         selectedArmy = new SelectedArmyModel();
         armyListData = DataFileLoader.S.GetSelectedArmyList();
 
-        availableUnitList.Initialize(armyListData, unitInventoryController);
+        availableUnitList.Initialize(armyListData, unitInventoryController, unitVisibilityController);
         availableUnitList.OnUnitAddNewUnitToSelected += HandleAddNewUnitAddNewUnitToToSelected;
 
         selectedUnitList.Initialize();
@@ -140,6 +141,12 @@ public partial class SelectedArmyController : Node
 
         // Are we allow to add more of this unit type?
         if (selectedArmy.GetUnitsOfTypeCount(unit) >= unitInventoryController.GetMaxCount(unit))
+        {
+            return false;
+        }
+
+        // Hidden units are not selectable
+        if (!unitVisibilityController.GetVisibilityPreference(unit))
         {
             return false;
         }
